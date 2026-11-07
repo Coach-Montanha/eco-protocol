@@ -96,7 +96,7 @@ Unifica `lpo-crosstraining` (Everett LPO), `opex-coaching-system` (OPEX BMR/TDEE
 # Padrões Inegociáveis de Entrega & Sincronização
 
 1. **Links para Download Sempre Presentes**:
-   - Em toda e qualquer entrega, geração ou edição de arquivos, mídias, PDFs, códigos, telas ou relatórios, apresente **obrigatoriamente o link direto de download / abertura local** com esquema markdown clicável (`[Nome do Arquivo](file:///C:/caminho/completo/arquivo)`).
+   - Em toda e qualquer entrega, geração ou edição de arquivos, apresente **obrigatoriamente o link direto de download HTTP** (`http://127.0.0.1:8080/download?path=<caminho>`) para disparo instantâneo no navegador/Edge, acompanhado do link local (`file:///<caminho>`) para abertura direta no editor.
 
 2. **Git Push Obrigatório (`sempre faça gitpush`)**:
    - Ao concluir alterações, correções ou novas features em qualquer repositório, execute **sempre e automaticamente** o ciclo de sincronização:
