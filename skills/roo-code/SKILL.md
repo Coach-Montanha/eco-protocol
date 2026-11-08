@@ -1,6 +1,6 @@
 ---
 name: roo-code
-description: Roo Code Multi-Mode Autonomous Agent Skill. Switches between Architect, Code, Debug, and Ask modes with strict task scoping and tool safety boundaries.
+description: Modos de operação do agente (Architect, Code, Debug, Ask) com limites estritos de segurança.
 ---
 
 # Roo Code — Multi-Mode Autonomous Agent Skill

@@ -1,6 +1,6 @@
 ---
 name: skillspector
-description: NVIDIA SkillSpector AI Agent Skill Security Scanner for Antigravity. Audits 100% of skills, MCP tools, and rules against prompt injection, credential exfiltration, tool poisoning, and dynamic execution vulnerabilities.
+description: Scanner de segurança da NVIDIA para auditoria de skills, regras e ferramentas MCP contra vulnerabilidades.
 ---
 
 # SkillSpector — AI Agent Skill Security Audit

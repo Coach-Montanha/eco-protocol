@@ -1,6 +1,6 @@
 ---
 name: writing-plans
-description: Spec-Driven Development Implementation Plan Skill. Translates specifications into granular, step-by-step technical plans (2-5 min tasks) with explicit file paths and automated verification steps.
+description: Criação de planos granulares de implementação passo a passo para desenvolvimento guiado por specs.
 ---
 
 # Writing Plans — Spec-Driven Development Skill

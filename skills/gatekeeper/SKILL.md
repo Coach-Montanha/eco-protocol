@@ -1,6 +1,6 @@
 ---
 name: gatekeeper
-description: Hub unificado de segurança, auditoria de código e qualidade pré-deploy. Funde coderabbit, review, open-kritt, security-audit e seguranca-api-keys.
+description: Portão unificado de segurança, auditoria de credenciais e conformidade OWASP antes de commits.
 ---
 
 # 🛡️ /gatekeeper — Auditoria de Código, Segurança & Pré-Deploy

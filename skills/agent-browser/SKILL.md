@@ -1,6 +1,6 @@
 ---
 name: agent-browser
-description: AI-Optimized Browser Automation & Navigation Skill (Vercel-Labs Agent Browser standard). Provides stable accessibility tree references (@e1, @e2) and fast execution for web tasks.
+description: Navegação e automação web otimizada para IA via árvore de acessibilidade no Microsoft Edge.
 ---
 
 # Agent Browser — Autonomous Navigation Skill

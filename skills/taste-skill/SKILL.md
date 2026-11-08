@@ -1,6 +1,6 @@
 ---
 name: taste-skill
-description: Leon Lin Design Taste Skill for AI Agents. Infers design intent (editorial, brutalist, minimal, luxury), audits existing UI, and eliminates generic boilerplate landing pages.
+description: Diretrizes de bom gosto visual de Leon Lin para eliminar páginas genéricas geradas por IA.
 ---
 
 # Taste Skill — Frontend Design Taste Framework

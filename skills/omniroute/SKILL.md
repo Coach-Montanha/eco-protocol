@@ -1,22 +1,15 @@
 ---
 name: omniroute
-description: Dynamic LLM Routing and Token Economy Engine for Antigravity. Automatically classifies prompts and assigns optimal model tiers (flash_lite, flash, pro) to maximize token savings while ensuring 100% data privacy.
+description: Alias unificado para o Canal Interno de economia de tokens do protocolo /eco (flash_lite, flash, pro).
 ---
 
-# OmniRoute — Dynamic LLM Token Economy Skill
+# OmniRoute — Canal Interno do Protocolo @eco
 
-Use OmniRoute to classify subagent tasks, optimize token consumption, and monitor token savings.
+> **Status:** Este protocolo foi fundido ao motor mestre **`/eco`** (sempre ativo como regra global).
 
-## Usage Guidelines
-
-1. **Routing Strategy**:
-   - `flash_lite`: For documentation lookups, quick code greps, file reads, and status checks. Saves ~85% tokens.
-   - `flash`: For standard coding, feature implementation, and UI component edits. Saves ~65% tokens.
-   - `pro`: For architectural redesigns, complex cross-file refactoring, and multi-agent coordination.
-
-2. **Sidecar Integration**:
-   - Execute sidecar classification: `node C:\Users\Administrator\.gemini\config\sidecars\omniroute.js`
-
-3. **Data Security & Confidentiality**:
-   - 100% local execution.
-   - Zero remote logging or telemetry.
+Quando acionado via `/omniroute` ou `@omniroute`, ativa diretamente o **Canal Interno do `/eco`**:
+- Classificação dinâmica de complexidade de sub-tarefas:
+  - `flash_lite`: ~85% de economia de tokens para lookups, greps e leituras.
+  - `flash`: ~65% de economia de tokens para desenvolvimento e implementação de código.
+  - `pro`: Reservado para arquitetura profunda de sistemas.
+- Telemetria e auditoria de economia mantidas 100% locais via sidecar `omniroute.js`.

@@ -1,6 +1,6 @@
 ---
 name: ralph-loop
-description: Ralph Loop Autonomous Iteration Skill (Geoffrey Huntley Ralph Wiggum Technique). Runs persistent fresh-context turns using git & filesystem state until test suite passes 100%.
+description: Iteração autônoma recursiva mantida até que a suíte completa de testes passe com 100% de sucesso.
 ---
 
 # Ralph Loop — Persistent Autonomous Iteration Skill

@@ -1,6 +1,6 @@
 ---
 name: emil-design-eng
-description: Emil Kowalski UI & Motion Design Engineering Skill. Anti-slop craftsmanship guidelines for purposeful animations, natural easing curves, spring physics, and polished React micro-interactions.
+description: Princípios de motion design e microinterações de Emil Kowalski com curvas spring e física natural.
 ---
 
 # Emil Kowalski Design Engineering Skill

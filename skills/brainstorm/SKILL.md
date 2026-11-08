@@ -1,6 +1,6 @@
 ---
 name: brainstorm
-description: Socratic Design & Interactive Ideation Skill. Clarifies ambiguous requirements, explores architectural options, and refines design decisions before coding.
+description: Design socrático e ideação interativa para esclarecer requisitos e explorar opções arquiteturais.
 ---
 
 # Brainstorm — Interactive Design & Ideation Skill

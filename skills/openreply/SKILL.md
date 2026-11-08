@@ -1,6 +1,6 @@
 ---
 name: openreply
-description: OpenReply Instagram Automation & Messaging Agent Skill. Enables automated comment-to-DM, auto-responders, lead qualification, and Instagram API integration.
+description: Automação de comentários, respostas em direct e qualificação de leads para Instagram.
 ---
 
 # OpenReply — Instagram Automation Skill

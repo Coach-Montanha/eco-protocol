@@ -1,6 +1,6 @@
 ---
 name: obsidian-flow
-description: Hub unificado de ingestão, manipulação e visualização no Obsidian. Funde obsidian-cli, obsidian-markdown, obsidian-bases, anydoc e json-canvas.
+description: Hub unificado de ingestão, organização e visualização de notas e bases no Obsidian.
 ---
 
 # 🧠 /obsidian-flow — Hub Unificado de Conhecimento Obsidian

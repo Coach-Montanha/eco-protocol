@@ -1,29 +1,44 @@
 ---
 name: replica
-description: Esteira unificada de engenharia reversa e reconstrução de software. Funde o pacote replica-* (recon, architect, brand, design, build, backend, diff, test, launch), clonar-interface-mimic e screenshot-to-code.
+description: Framework clean-room para engenharia reversa e reconstrução independente de sistemas e UIs.
 ---
 
-# 🧬 /replica — Pipeline Unificado de Engenharia Reversa e Clonagem
+# 🧬 /replica — Hub Mestre de Engenharia Reversa & Reconstrução Clean-Room
 
-O `/replica` consolida todas as etapas de desmontagem, análise e recriação limpa de aplicações web e mobile:
+O `/replica` consolida todas as modalidades de descompilação, análise visual, extração de arquitetura e recriação limpa de software (web, mobile, binários ou APKs) em um pipeline automatizado de 5 etapas:
 
-## 1. Módulos Integrados
-- **Reconhecimento & Captura (`replica-recon`, `clonar-interface-mimic`, `screenshot-to-code`)**:
-  - Extração de mapas de telas, fluxos de usuário e hierarquia visual a partir de URLs, APKs ou capturas de tela.
-- **Arquitetura & Modelagem (`replica-architect`, `replica-backend`)**:
-  - Definição de stack econômica (SQLite/PocketBase/Hono), modelagem relacional de banco e rotas de API.
-- **Design & Tokens (`replica-design`, `replica-brand`)**:
-  - Extração e recriação de tokens de cor, escala tipográfica, sombras e componentes Tailwind CSS sem usar marcas de terceiros.
-- **Construção & Paridade (`replica-build`, `replica-diff`, `replica-test`, `replica-launch`)**:
-  - Implementação em fatias verticais, diff estrutural de telas, testes automatizados e checklist de publicação.
+---
 
-## 2. O Ciclo em 4 Fases
+## 1. Roteamento Inteligente de Entrada
+O `/replica` detecta automaticamente o formato do alvo e aciona a estratégia adequada:
+- **Alvo APK / Binário / Firmware (`engenhariareversadeep`, `apktool-modifier`, `rea`)**:
+  - Descompilação local (Apktool, Ghidra), inspeção de `smali`, strings de conexão, tráfego de rede e permissões.
+- **Alvo Visual / Telas / URLs (`engenhariareversavisual`, `clonar-interface-mimic`, `screenshot-to-code`)**:
+  - Extração de layouts, tokens de design, componentes UI e conversão fiel em código Tailwind CSS + React via Microsoft Edge.
+- **Sistema Completo (`engenhariareversafull`)**:
+  - Engenharia reversa ponta a ponta em 5 fases com reconstrução limpa (clean-room).
+
+---
+
+## 2. O Ciclo Clean-Room em 5 Fases
+
 ```
- [ 1. RECON ] ➔ [ 2. DESIGN & SCHEMAS ] ➔ [ 3. BUILD CIRÚRGICO ] ➔ [ 4. DIFF & TEST ]
+ [ 1. RECON ] ➔ [ 2. MODELAGEM SQL/API ] ➔ [ 3. REBRAND & TOKENS ] ➔ [ 4. BUILD CIRÚRGICO ] ➔ [ 5. DIFF & GATE ]
 ```
 
-## 3. Exemplos Práticos
-- Clonagem de tela:
-  > `/replica recrie este layout do painel financeiro em Tailwind CSS + React puro com dados tipados para PocketBase.`
-- Engenharia reversa completa:
-  > `/replica analise o fluxo de agendamento do app X e gere a arquitetura completa em Hono + SQLite com testes de paridade.`
+1. **Fase 1 — Reconhecimento (`replica-recon`)**:
+   - Inventário de telas, fluxos de autenticação, matriz de funcionalidades e endpoints.
+2. **Fase 2 — Arquitetura & Banco (`replica-architect`, `replica-backend`)**:
+   - Esquemas SQL relacionais para SQLite/PocketBase, regras de acesso e rotas REST/Hono sem tecnologias infladas.
+3. **Fase 3 — Design System & Rebranding (`replica-design`, `replica-brand`)**:
+   - Paleta de cores com contraste verificado (WCAG), escalas tipográficas e componentes nativos livres de marcas de terceiros.
+4. **Fase 4 — Construção por Fatias Verticais (`replica-build`)**:
+   - Código escrito do zero, 100% autoral, sem copiar código ou ativos proprietários do alvo.
+5. **Fase 5 — Paridade & Testes (`replica-diff`, `replica-test`, `replica-launch`)**:
+   - Comparação estrutural de telas, testes Playwright end-to-end e liberação pelo portão do gatekeeper.
+
+---
+
+## 3. Aliases Integrados
+Os seguintes comandos satélites agora são roteados diretamente para o `/replica`:
+- `/engenhariareversa`, `/engenhariareversadeep`, `/engenhariareversavisual`, `/engenhariareversafull`, `/clonar-interface-mimic`, `/screenshot-to-code`.

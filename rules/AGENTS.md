@@ -51,6 +51,14 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
    - Graphify: Inspeção de grafos de relacionamento antes de refatorações de código.
    - MicroKit/Bencho UI: Interfaces modernas em TSX/CSS nativo a 60 FPS sem bibliotecas pesadas.
 
+9. **Blindagem de Produção, Resiliência & Anti-SaaS (/vibe-production-checklist, /matriz-anti-saas, /pocketbase)**:
+   - Toda API, rota, script ou serviço deve nascer pronto para produção: idempotência em operações mutáveis, rate limiting defensivo, timeout em conexões de rede e índices obrigatórios em consultas SQLite/PocketBase.
+   - Preferência absoluta por binários únicos locais e arquiteturas auto-hospedadas (PocketBase, SQLite, Hono, Caddy) eliminando custos e dependências de nuvens terceiras (Supabase, Firebase, Auth0).
+
+10. **Extração Web Furtiva & Testes Empíricos de Carga (/stealth-browser, /scrapling, /load-testing-k6)**:
+    - Coleta web protegida sem consumo de tokens via Playwright camuflado e scraping indetectável (`scrapling`/`stealth-browser`) usando estritamente o Microsoft Edge.
+    - Validação empírica de performance via `load-testing-k6`: micro-benchmarks locais antes de declarar otimizações concluídas, garantindo zero degradação de CPU e ausência de vazamento de memória.
+
 ---
 
 # Hubs Mestres Consolidados do Ecossistema
@@ -69,13 +77,38 @@ Unifica o pacote `replica-*`, `engenhariareversa` (deep, visual, full), `apktool
 - Ciclo clean-room em 5 fases: Recon ➔ Modelagem SQL/Hono ➔ Rebranding/Tokens ➔ Build cirúrgico ➔ Diff estrutural e testes de paridade.
 
 ### 3. ✨ /impeccable — Hub Mestre de Craftsmanship Frontend & UI/UX
-Unifica `impeccable`, `emil-design-eng`, `taste-skill`, `web-design-guidelines`, `front-end-checklist`, `react-bits`, `steacode-ui`, `mobile-ux-engine` e `ux-laws-design`:
-- Eliminação de estética genérica de IA; microinterações 60 FPS com curvas spring.
-- Regra mobile inegociável: `<input>` com fonte mínima de 16px (evita auto-zoom no iOS Safari) e botões $\ge 44\times 44$px.
+Unifica `impeccable`, `ui-ux-pro-max`, `apple-design`, `apple-bento-grid`, `mobile-app-ui-design`, `emil-design-eng`, `taste-skill`, `web-design-guidelines`, `front-end-checklist`, `react-bits`, `steacode-ui`, `mobile-ux-engine` e `ux-laws-design`:
+- Eliminação total de estética genérica de IA (anti-slop); 80 estilos visuais, 192 paletas calibradas (regra 60-30-10) e microinterações 60 FPS com curvas spring.
+- Regra mobile inegociável: `<input>` com fonte mínima de 16px (evita auto-zoom no iOS Safari) e botões $\ge 44\times 44$px (ou $\ge 56$px para interfaces ativas de treino/fitness).
 
 ### 4. 🏋️ @montanha-coach — Hub Mestre de Fisiologia, Treino & Nutrição
 Unifica `lpo-crosstraining` (Everett LPO), `opex-coaching-system` (OPEX BMR/TDEE), `brad-pilon-fasting` (Eat Stop Eat), `lyle-mcdonald-nutrition` (PSMF & Stubborn Fat Protocol), `playbook-prompts-personal-trainer` e `personal-trainer-prompts`:
 - Prescrição científica direta, recomposição corporal, mobilização de gordura teimosa e atendimento humanizado anti-churn de alunos no tom inegociável da skill `minha-voz`.
+
+---
+
+# Sistema de Orquestração Autônoma de Skills & Despacho por Intenção
+
+1. **Triagem & Auto-Trigger Semântico por Intenção**:
+   - A IA reconhece a intenção do usuário e aplica os protocolos internos automaticamente sem exigir comandos de barra (/):
+     - **Fisiologia, Treinos, Cargas, LPO, Dieta, TDEE, Jejum**: Ativação autônoma imediata de `montanha-coach` + `opex-coaching-system` + `lyle-mcdonald-nutrition` + `lpo-crosstraining` + `minha-voz`. Cálculo exato de TDEE ($BMR+TEF+EEE+NEAT$), macros em g/kg e Metcons sustentáveis com taxas 1:1/1:2.
+     - **Conteúdo, Instagram, Carrossel, Roteiros, Reels, Stories**: Ativação autônoma de `insta` + `formato-carrossel` + `formato-roteiro` + `stories-10x-copy` + `minha-voz`. Carrosséis slide-a-slide com ganchos fortes e roteiros calculados a 2,5 palavras por segundo.
+     - **Código, Refatoração, Bugs, Arquitetura, TypeScript, SQLite**: Ativação autônoma de `ponytail` + `karpathy-skills` + `debugging-and-error-recovery` + `gatekeeper`. Edições cirúrgicas pontuais, testes de regressão, zero shotgun debugging.
+     - **Atendimento, Vendas, Churn, Alunos Inativos, WhatsApp**: Ativação autônoma de `personal-trainer-prompts` + `automatizar-whatsapp-seguro` + `minha-voz`. Mensagens autênticas, diretas e com regras antiban.
+     - **Clonagem de UIs, Layouts, Screenshots, Design Systems**: Ativação autônoma de `replica` + `screenshot-to-code` + `impeccable`. Código Tailwind/HTML limpo, 60 FPS, regras de acessibilidade e mobile HIG Apple.
+     - **Contratos, Termos, Parcerias, Prospecção B2B, LGPD**: Ativação autônoma de `legal-brazil` + `lgpd-web-compliance` + `prospeccao-b2b`. Triagem de riscos sob a legislação brasileira e prospecção direta.
+
+2. **Presets de Modos Operacionais Nativos**:
+   - `@coach`: Modo Consultoria Fisiológica, Treinos Periodizados e Nutrição Científica.
+   - `@criador`: Modo Esteira Editorial, Carrosséis de Alta Conversão e Vídeos 9:16.
+   - `@dev`: Modo Engenharia de Software Industrial no padrão Ponytail & Karpathy.
+   - `@negocios`: Modo Gestão Comercial, Contratos, Vendas e Ferramentas Anti-SaaS.
+
+3. **Pipelines em Cadeia (Skill Chaining)**:
+   - Tarefas compostas passam automaticamente entre as skills necessárias sem exigir confirmação intermediária para passos óbvios (ex: Áudio/Texto Bruto ➔ `extrair-procedimento` ➔ `minha-voz` ➔ `formato-carrossel`/`formato-roteiro` ➔ geração visual/texto).
+
+4. **Regra de Auto-Consulta (Search-First de Métodos)**:
+   - Proibido inventar conceitos genéricos de IA quando houver método consagrado no cofre (Everett para LPO, Lyle McDonald para secagem, OPEX para TDEE/Metcons, Leandro Ladeira para Stories).
 
 ---
 

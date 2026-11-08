@@ -1,6 +1,6 @@
 ---
 name: gsd-core
-description: GSD Core (Get Stuff Done) Spec-Driven Development & Context Engineering Skill. Organizes work into PROJECT.md, STATE.md, and ROADMAP.md via a 5-phase loop (Initialize -> Discuss -> Plan -> Execute -> Verify).
+description: Metodologia Spec-Driven Development: ciclo de 5 fases (Discuss, Plan, Execute, Verify, Validate).
 ---
 
 # GSD Core — Context Engineering & SDD Skill

@@ -1,6 +1,6 @@
 ---
 name: pro
-description: Pro Prompt Studio Skill for Antigravity (/pro and @pro). Instant access to 80 professional ChatGPT/AGY prompt codes covering Copywriting, Marketing, Coding, Learning, Strategy, and Social Media.
+description: Acesso rápido a 80 prompts profissionais categorizados para copywriting, estratégia e engenharia.
 ---
 
 # `/pro` & `@pro` — Pro Prompt Studio Skill

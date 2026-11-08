@@ -1,6 +1,6 @@
 ---
 name: cine
-description: Dedicated Cine Director & Prompt Selector Skill for Antigravity (/cine and @cine). Direct access to 34 visual slash commands (camera moves, climate, studio styles, exploded product views) for image and video generation.
+description: Diretor de cena e prompts cinematográficos com 34 comandos para geração de imagem e vídeo.
 ---
 
 # `/cine` & `@cine` — Visual Director & Prompt Menu Skill

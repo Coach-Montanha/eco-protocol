@@ -1,6 +1,6 @@
 ---
 name: playwright
-description: End-to-End Automated Testing & Visual Regression Skill using Playwright. Generates, runs, and debugs Playwright tests across Chromium, Firefox, and WebKit.
+description: Automação de testes ponta a ponta (E2E) e regressão visual com Playwright no Microsoft Edge.
 ---
 
 # Playwright E2E Testing & Automation Skill

@@ -1,6 +1,6 @@
 ---
 name: higgsfield-effects
-description: Higgsfield Effects 2.0 & Cinema Studio AI Video Skill. Controls cinematic camera paths, VFX presets, Soul 2.0 visual generation, and video generation workflows via Gemini Omni / Higgsfield API.
+description: Controle de movimentos de câmera cinematográfica, efeitos visuais Soul 2.0 e geração de vídeo.
 ---
 
 # Higgsfield Effects 2.0 — AI Video Skill

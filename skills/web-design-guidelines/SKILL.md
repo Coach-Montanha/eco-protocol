@@ -1,6 +1,6 @@
 ---
 name: web-design-guidelines
-description: Vercel-Labs Web Interface Guidelines & UI/UX Audit Skill. Audits HTML/CSS/React/Vue code against 100+ rules covering accessibility (ARIA, keyboard nav), performance, layout, and CWV standards.
+description: Auditoria de acessibilidade, performance e layout web baseada nas diretrizes Vercel.
 ---
 
 # Web Design Guidelines Audit Skill

@@ -1,6 +1,6 @@
 ---
 name: coderabbit
-description: CodeRabbit Automated Code Review & Security Skill. Audits diffs, detects bugs, verifies security vulnerabilities, and rates code quality before commit/push.
+description: Revisão automatizada de código e auditoria de pull requests integrada a pipelines de CI/CD.
 ---
 
 # CodeRabbit — Automated Code Review Skill

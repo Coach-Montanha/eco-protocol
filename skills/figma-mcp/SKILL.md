@@ -1,6 +1,6 @@
 ---
 name: figma-mcp
-description: Figma Model Context Protocol (MCP) Skill. Connects Figma design files, frames, and design tokens directly to agent context for 1-to-1 pixel-perfect code implementation.
+description: Conexão de arquivos e design tokens do Figma diretamente ao contexto do agente para implementação fiel.
 ---
 
 # Figma MCP — Design-to-Code Context Skill

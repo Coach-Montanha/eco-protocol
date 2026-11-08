@@ -1,6 +1,6 @@
 ---
 name: cinema-prompt-studio
-description: Studio Prompt Director Skill for Antigravity (Cinemastudio & Image/Video Generators). Translates 34 visual slash-commands (camera moves, climate, lighting styles, product teardown/exploded views) into technical prompts for generate_image, gemini-omni-flash-api, and higgsfield-effects.
+description: Diretor de fotografia de prompts visuais: 34 movimentos de câmera, estilos de estúdio e iluminação.
 ---
 
 # Cinema Prompt Studio — Visual Direction Skill
