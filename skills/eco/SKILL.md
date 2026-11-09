@@ -123,3 +123,12 @@ O protocolo `/eco` atua como **meta-orquestrador autônomo** para todas as 140+ 
 
 4. **Regra de Auto-Consulta (Search-First de Métodos)**:
    - Proibição absoluta de improvisação genérica quando houver método consagrado no cofre (Everett, Lyle, OPEX, Ladeira).
+
+---
+
+## 12. Telemetria de Tokens & Relatório de Economia Obrigatório
+
+Em cumprimento à diretriz global permanente do `@eco`, toda resposta ao usuário deve concluir com a aferição transparente da economia gerada pelo motor:
+- **Gasto Real**: Tokens consumidos na requisição otimizada com `@eco` (execução local, scripts pontuais, mcptoon, qualquer ingestão zero-tokens).
+- **Sem Automação**: Custo projetado caso a requisição fosse realizada sem as diretrizes do ecossistema (leituras integrais de arquivos pesados, CoT verboso, schemas MCP sem compressão, ferramentas de nuvem redundantes).
+- **Economia Total**: Diferencial de tokens poupados e taxa percentual de eficiência.

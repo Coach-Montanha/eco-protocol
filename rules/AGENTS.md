@@ -46,8 +46,9 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
    - Tolerância zero a chutes aleatórios (*no shotgun debugging*).
    - Congele edições em caso de quebra, isole a causa-raiz (5 Porquês), aplique correção pontual e valide com teste de regressão.
 
-8. **mcptoon, Graphify & MicroKit/Bencho UI**:
+8. **mcptoon, Auto-Ontology, Graphify & MicroKit/Bencho UI**:
    - mcptoon: Compactação dinâmica de esquemas MCP e limpeza de contexto para retenção de memória de trabalho.
+   - Auto-Ontology: Construção automatizada de ontologias semânticas e grafos de conhecimento determinísticos (nós e arestas) sobre o cofre Obsidian e código sem alucinações.
    - Graphify: Inspeção de grafos de relacionamento antes de refatorações de código.
    - MicroKit/Bencho UI: Interfaces modernas em TSX/CSS nativo a 60 FPS sem bibliotecas pesadas.
 
@@ -58,6 +59,10 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
 10. **Extração Web Furtiva & Testes Empíricos de Carga (/stealth-browser, /scrapling, /load-testing-k6)**:
     - Coleta web protegida sem consumo de tokens via Playwright camuflado e scraping indetectável (`scrapling`/`stealth-browser`) usando estritamente o Microsoft Edge.
     - Validação empírica de performance via `load-testing-k6`: micro-benchmarks locais antes de declarar otimizações concluídas, garantindo zero degradação de CPU e ausência de vazamento de memória.
+
+11. **Automação Nativa de Desktop & Computer Use (/agent-desktop, /orca-agent)**:
+    - Controle direto de janelas, formulários e programas GUI do Windows através de árvore de acessibilidade nativa (UI Automation) e MCP em Rust sem captura contínua de tela por visão computacional.
+    - Ponte remota segura via `orca-agent` para despachar ações de desktop e aprovar tarefas pelo celular.
 
 ---
 
@@ -92,9 +97,10 @@ Unifica `lpo-crosstraining` (Everett LPO), `opex-coaching-system` (OPEX BMR/TDEE
 1. **Triagem & Auto-Trigger Semântico por Intenção**:
    - A IA reconhece a intenção do usuário e aplica os protocolos internos automaticamente sem exigir comandos de barra (/):
      - **Fisiologia, Treinos, Cargas, LPO, Dieta, TDEE, Jejum**: Ativação autônoma imediata de `montanha-coach` + `opex-coaching-system` + `lyle-mcdonald-nutrition` + `lpo-crosstraining` + `minha-voz`. Cálculo exato de TDEE ($BMR+TEF+EEE+NEAT$), macros em g/kg e Metcons sustentáveis com taxas 1:1/1:2.
-     - **Conteúdo, Instagram, Carrossel, Roteiros, Reels, Stories**: Ativação autônoma de `insta` + `formato-carrossel` + `formato-roteiro` + `stories-10x-copy` + `minha-voz`. Carrosséis slide-a-slide com ganchos fortes e roteiros calculados a 2,5 palavras por segundo.
-     - **Código, Refatoração, Bugs, Arquitetura, TypeScript, SQLite**: Ativação autônoma de `ponytail` + `karpathy-skills` + `debugging-and-error-recovery` + `gatekeeper`. Edições cirúrgicas pontuais, testes de regressão, zero shotgun debugging.
-     - **Atendimento, Vendas, Churn, Alunos Inativos, WhatsApp**: Ativação autônoma de `personal-trainer-prompts` + `automatizar-whatsapp-seguro` + `minha-voz`. Mensagens autênticas, diretas e com regras antiban.
+     - **Testes Atléticos, Força Máxima, Potência (RFD), Condicionamento Tático**: Ativação imediata de `nsca-conditioning-standards` + `montanha-coach`. Volumes por fase, baterias de testes (1RM, salto, agilidade T) e descansos bioenergéticos.
+     - **Dores, Travamento no Agachamento/Overhead, Mobilidade, Liberação Miofascial**: Ativação imediata de `supple-leopard-mobility` + `montanha-coach`. Princípio de torque, Spine First, mobilização articular com elástico e mashing tecidual (Starrett).
+     - **Atendimento, Vendas, Churn, Alunos Inativos, WhatsApp, Fechamento de Consultoria**: Ativação autônoma de `spin-selling-fitness` + `personal-trainer-prompts` + `automatizar-whatsapp-seguro` + `minha-voz`. Sequência SPIN (Situação, Problema, Implicação, Necessidade de Solução) e padrões de PNL.
+     - **Conteúdo, Instagram, Carrossel, Roteiros, Reels, Stories, Ganchos Psicológicos**: Ativação autônoma de `arquetipos-persuasao` + `insta` + `formato-carrossel` + `formato-roteiro` + `stories-10x-copy` + `minha-voz`. Ganchos viscerais da Sombra (Jung) e Leis Humanas (Greene), carrosséis slide-a-slide e roteiros a 2,5 palavras por segundo.
      - **Clonagem de UIs, Layouts, Screenshots, Design Systems**: Ativação autônoma de `replica` + `screenshot-to-code` + `impeccable`. Código Tailwind/HTML limpo, 60 FPS, regras de acessibilidade e mobile HIG Apple.
      - **Contratos, Termos, Parcerias, Prospecção B2B, LGPD**: Ativação autônoma de `legal-brazil` + `lgpd-web-compliance` + `prospeccao-b2b`. Triagem de riscos sob a legislação brasileira e prospecção direta.
 
@@ -138,3 +144,17 @@ Unifica `lpo-crosstraining` (Everett LPO), `opex-coaching-system` (OPEX BMR/TDEE
      3. `git commit -m "feat/fix: descrição objetiva"`
      4. `git push`
    - Nunca encerre a tarefa sem realizar o `git push` do repositório modificado.
+
+3. **Telemetria de Tokens & Relatório de Economia Obrigatório (Regra Inegociável)**:
+   - Ao final de **100% das respostas e solicitações**, apresentar obrigatoriamente um resumo conciso com a telemetria do consumo de tokens da interação:
+     - **Gasto Real**: Quantidade estimada de tokens consumidos na solicitação com a automação `@eco` (execução local, scripts cirúrgicos Python/PowerShell, mcptoon, ingestão zero-tokens, etc.).
+     - **Sem Automação**: Quantidade estimada de tokens que teriam sido consumidos no fluxo convencional sem o `@eco` (leitura massiva de arquivos inteiros no contexto, raciocínio CoT verboso, esquemas MCP descompactados, ausência de filtragem cirúrgica).
+     - **Economia Gerada**: Quantidade absoluta de tokens poupados e percentual de redução obtido.
+   - Formato padronizado obrigatório:
+     ```markdown
+     ---
+     📊 **Telemetria de Tokens @eco**:
+     - **Gasto Real**: ~X tokens
+     - **Sem Automação**: ~Z tokens (fluxo convencional não otimizado)
+     - **Economia Total**: ~K tokens poupados (~W%)
+     ```
