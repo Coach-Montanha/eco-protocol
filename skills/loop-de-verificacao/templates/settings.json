@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pnpm tsc --noEmit 1>&2 || exit 2",
+            "timeout": 300
+          }
+        ]
+      }
+    ]
+  }
+}

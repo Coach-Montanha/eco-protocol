@@ -71,10 +71,17 @@ Toda e qualquer alteração de código, refatoração estrutural ou criação de
 
 ---
 
-## 7. Debugging Stop-the-Line (Tolerância Zero a Chutes)
+## 7. Loop Fechado de Verificação & Debugging Stop-the-Line (`loop-de-verificacao` + `debugging-and-error-recovery`)
 
-- Diante de qualquer erro ou quebra: congelar edições aleatórias (*no shotgun debugging*).
-- Isolar a causa-raiz pelo método dos 5 Porquês, aplicar correção pontual cirúrgica e rodar teste de regressão imediato.
+Fundido diretamente no `@eco` a partir da metodologia de Boris Cherny (criador do Claude Code) e Fabiano:
+- **Loop Fechado de 2x a 3x de Qualidade**: O agente nunca finaliza no achismo de "parece pronto". Toda tarefa exige uma checagem determinística que volta binariamente `passou` (0) ou `falhou` (1/2).
+- **Pedido com Prova Inegociável**: Respostas de conclusão exigem obrigatoriamente a apresentação do comando executado e a saída completa comprovando a integridade. Proibido declarar término sem prova.
+- **Stop Hooks Determinísticos (Exit Code 2)**: Bloqueio estrutural de parada. Se o teste, typecheck, build ou conferidor de vídeo falhar, o processo aborta a saída com código de erro 2 e devolve a lista de falhas para correção imediata pelo agente.
+- **Princípio da Sonda (Anti-Cegueira / Erro Plantado)**: "Conferência que nunca reprova não está conferindo nada". Antes de confiar em qualquer rotina de teste ou auditoria, planta-se um erro artificial para provar que a checagem é capaz de reprovar.
+- **Revisor Cego Independente**: Entregas críticas são auditadas por subagente somente-leitura (`Read, Glob, Grep`) sem o viés cognitivo do agente que implementou a solução.
+- **Tolerância Zero a Chutes (*No Shotgun Debugging*)**: Diante de falhas, congelar edições aleatórias, isolar a causa-raiz (5 Porquês), aplicar correção pontual cirúrgica e validar com teste de regressão.
+- **Ciclo de Imunização Contínua**: Todo defeito identificado manualmente vira imediatamente uma nova checagem automatizada na seção "Como provar que ficou pronto" do `CLAUDE.md`.
+- **Human-in-the-Loop nos Pontos Sem Volta**: Deploys de produção, subida de campanhas de tráfego, disparo de mensagens e exclusões exigem portão de aprovação humana.
 
 ---
 
@@ -107,7 +114,8 @@ O protocolo `/eco` atua como **meta-orquestrador autônomo** para todas as 140+ 
 1. **Auto-Trigger por Intenção**:
    - **Fisiologia & Treino**: Ativação autônoma imediata de `montanha-coach` + `opex-coaching-system` + `lyle-mcdonald-nutrition` + `lpo-crosstraining` + `minha-voz`.
    - **Conteúdo & Instagram**: Ativação autônoma de `insta` + `formato-carrossel` + `formato-roteiro` + `stories-10x-copy` + `minha-voz`.
-   - **Engenharia & Código**: Ativação autônoma de `ponytail` + `karpathy-skills` + `debugging-and-error-recovery` + `gatekeeper`.
+   - **Engenharia & Código**: Ativação autônoma de `ponytail` + `karpathy-skills` + `debugging-and-error-recovery` + `gatekeeper` + `loop-de-verificacao`.
+   - **Edição & Vídeo**: Ativação autônoma de `insta` + `conferir_video` + `loop-de-verificacao` (com folhas de contato, análise de silêncio/volume e sondas).
    - **Atendimento & Comercial**: Ativação autônoma de `personal-trainer-prompts` + `automatizar-whatsapp-seguro` + `minha-voz`.
    - **Clonagem de Interfaces**: Ativação autônoma de `replica` + `screenshot-to-code` + `impeccable`.
    - **Contratos & Negócios**: Ativação autônoma de `legal-brazil` + `lgpd-web-compliance` + `prospeccao-b2b`.

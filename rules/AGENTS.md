@@ -42,9 +42,15 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
    - Simplicidade radical: "o melhor código é o código não escrito". Priorize reuso de código nativo sem adicionar pacotes npm/pip desnecessários.
    - Edições cirúrgicas mínimas preservando comentários e contexto adjacente.
 
-7. **Stop-the-Line Debugging (/debugging-and-error-recovery)**:
-   - Tolerância zero a chutes aleatórios (*no shotgun debugging*).
-   - Congele edições em caso de quebra, isole a causa-raiz (5 Porquês), aplique correção pontual e valide com teste de regressão.
+7. **Loop Fechado de Verificação & Debugging Stop-the-Line (/loop-de-verificacao, /debugging-and-error-recovery)**:
+   - Funde a metodologia de Boris Cherny (criador do Claude Code) e Fabiano para entregar de 2x a 3x mais qualidade em cada entrega.
+   - **Pedido com Prova Inegociável**: Nenhuma tarefa termina no achismo de "parece pronto". Toda conclusão exige a apresentação do comando de validação executado e da saída comprovando código 0.
+   - **Stop Hooks Determinísticos (Exit Code 2)**: Intercepção incondicional da saída. Se o teste, typecheck, build ou conferidor falhar, a finalização é bloqueada com código de saída 2 e o erro é devolvido para correção autônoma.
+   - **Princípio da Sonda (Anti-Cegueira / Erro Plantado)**: "Conferência que nunca reprova não está conferindo nada". Nenhuma rotina de teste entra em produção sem antes provar que reprova um erro deliberadamente plantado.
+   - **Revisor Cego Independente**: Entregas complexas são auditadas por subagente somente-leitura (`Read, Glob, Grep`) sem acesso ao raciocínio da criação.
+   - **Tolerância Zero a Chutes (*No Shotgun Debugging*)**: Diante de quebras, congele edições aleatórias, isole a causa-raiz (5 Porquês), aplique correção pontual e valide com teste de regressão.
+   - **Imunização Contínua**: Todo erro que escapar para o olho humano vira imediatamente uma nova regra e checagem automatizada na seção "Como provar que ficou pronto" do `CLAUDE.md`.
+   - **Human-in-the-Loop nos Pontos Sem Volta**: Deploys de produção, subida de campanhas de tráfego, disparo de mensagens e exclusões exigem portão de aprovação humana.
 
 8. **mcptoon, Auto-Ontology, Graphify & MicroKit/Bencho UI**:
    - mcptoon: Compactação dinâmica de esquemas MCP e limpeza de contexto para retenção de memória de trabalho.

@@ -1,0 +1,4281 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 9909
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F2 16 Tf
+18.3999999999999986 TL
+0.118 g
+56.6929133858267775 785.1970866141732586 Td
+(Loop de verificacao no Claude Code: o guia completo pra ele) Tj
+ET
+BT
+/F2 16 Tf
+18.3999999999999986 TL
+0.118 g
+56.6929133858267775 763.9372440944881646 Td
+(conferir o proprio trabalho) Tj
+ET
+0.91 0.39 0.04 RG
+56.6929133858267775 737.0081102362204319 m
+538.5870866141731312 737.0081102362204319 l
+S
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 714.3309448818897636 Td
+(2 a 3 vezes a qualidade do resultado final: e o que o Boris Cherny, que criou o Claude Code, diz que acontece quando o) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 701.5750393700786844 Td
+(Claude tem um jeito de conferir o proprio trabalho, na dica que ele chamou de a mais importante da thread de 2 de) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 688.819133858267719 Td
+(janeiro de 2026. A documentacao oficial explica o porque: o Claude para quando o trabalho parece pronto, e se ele nao) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 676.0632283464566399 Td
+(tem nada pra rodar que diga se esta pronto mesmo, quem testa e voce, que vira o gargalo de cada entrega.) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 656.2207086614173477 Td
+(O loop de verificacao e dar pro Claude uma checagem que volta passou ou falhou, como um teste, um build, um print do) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 643.4648031496062686 Td
+(navegador ou a conferencia de um video renderizado, pra ele fazer, conferir, corrigir e so entao dizer que terminou. O) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 630.7088976377951894 Td
+(Claude Code de hoje, na versao 2.1.319, tem 4 jeitos de fechar esse loop, do pedido com prova ao Stop hook que nao) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 617.952992125984224 Td
+(deixa ele parar enquanto a checagem falha, e nenhum deles custa nada alem do plano que voce ja usa.) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 598.1104724409448181 Td
+(Nesta pagina esta o guia completo, conferido em 7 de novembro de 2026: 11 passos do CLAUDE.md ao Claude rodando) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 585.3545669291338527 Td
+(sozinho com limite, o exemplo da edicao de video montado do zero com o conferidor pronto pra colar, que pegou os 5) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 572.5986614173227736 Td
+(erros plantados no teste, o Stop hook que barra render reprovado, a checagem certa pra programacao, trafego pago e) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 559.8427559055116944 Td
+(copy, 10 prompts e a conferencia antes de deixar o Claude trabalhar sem voce.) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0.118 g
+56.6929133858267775 534.3309448818897636 Td
+(Como montar o loop de verificacao, do pedido com prova ao hook sem) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0.118 g
+56.6929133858267775 514.4884251968503577 Td
+(excecao) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 494.6459055118109518 Td
+(Do 1 ao 6 e o loop pra qualquer trabalho, do 7 ao 9 e o exemplo da edicao de video montado do zero, e o 10 e o 11) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 481.8899999999999295 Td
+(poem um revisor de fora e deixam o Claude rodando sozinho com limite.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 457.795511811023573 Td
+(1. Atualize o Claude Code e confira o plano) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 444.7561417322834245 Td
+(Tudo aqui roda no Claude Code, que vem nos planos pagos a partir do Pro: R$ 110 por mes ou R$ 92 no anual, cobrado em real, e US$) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 434.5514173228345953 Td
+(20 por mes na pagina de preco em dolar. A versao de 6 de novembro de 2026 e a 2.1.319, e o /goal, o /verify e os hooks ja vem nela,) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 424.346692913385823 Td
+(sem instalar nada.  1\) O /goal e os hooks do projeto so ligam depois que voce confia na pasta, no aviso que aparece na primeira vez) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 414.1419685039369938 Td
+(que abre o Claude Code nela  2\) O Claude no Chrome pede a extensao Claude in Chrome 1.0.36 ou mais nova e login pelo /login, nao) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 403.9372440944882214 Td
+(por chave de API  3\) O computer use, que deixa o Claude ver e clicar na tela, e research preview so no macOS e vem no Pro, no Max e) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 393.7325196850393922 Td
+(no Ultra  claude update) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 383.5277952755906199 Td
+(claude --version  https://code.claude.com/docs/en/setup) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 361.9844881889764565 Td
+(2. Escreva no CLAUDE.md como provar que ficou pronto) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 348.945118110236308 Td
+(A documentacao diz que a linha mais util do seu CLAUDE.md e o comando que roda a checagem, porque e com ele que o Claude) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 338.7403937007874788 Td
+(confere o proprio trabalho enquanto avanca. Vale pra codigo e vale pra qualquer entrega, seja o comando do teste, o script que confere) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 328.5356692913386496 Td
+(o video ou a regua da legenda. Escreva so o que o Claude nao descobre lendo a pasta e mantenha o arquivo abaixo de 200 linhas.  #) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 318.3309448818898773 Td
+(acrescenta a secao de conferencia no CLAUDE.md da pasta do projeto) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 308.1262204724411049 Td
+(cat >> CLAUDE.md <<'MD') Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 287.7167716535434465 Td
+(## Como provar que ficou pronto) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 277.5120472440946742 Td
+(- Codigo: npm test e npm run build, os 2 saindo sem erro) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 267.3073228346459018 Td
+(- Video: python3 conferir_video.py render/final.mp4 --formato 1080x1920, e o relatorio termina em APROVADO) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 257.1025984251970158 Td
+(- Legenda e copy: a regua em regras-copy.md, item por item) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 246.8978740157482434 Td
+(- Antes de dizer que terminou, rode a checagem e me mostre o comando e a saida. Se nao deu pra conferir, diga o que faltou.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 236.6931496062994711 Td
+(MD  Atalho: Uma linha como sempre rode o teste antes de terminar funciona quase sempre, mas nao sempre. Quando precisar de) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 226.4884251968506987 Td
+(sempre, a resposta e o Stop hook do passo 6.  https://code.claude.com/docs/en/best-practices) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 204.9451181102365354 Td
+(3. Peca a prova, nao um terminei) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 191.9057480314963868 Td
+(O jeito mais leve de fechar o loop nao pede configuracao: no proprio pedido, diga o que conta como pronto e mande rodar a checagem) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 181.7010236220475008 Td
+(ate passar. E peca a prova, o comando que rodou e a saida, ou o print, porque a frase todos os testes passam, sozinha, diz pouco, e ler) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 171.4962992125987284 Td
+(a saida e mais rapido que rodar de novo. Pra deixar isso automatico, o Superpowers, de Jesse Vincent, traz a skill) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 161.2915748031499561 Td
+(verification-before-completion, cuja regra e nenhuma afirmacao de pronto sem prova nova.  1\) No pedido: rode os testes de) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 151.0868503937011837 Td
+(autenticacao no fim, continue ate passarem e me mostre a saida  2\) O Superpowers tem 15 skills, licenca MIT, 313.953 estrelas e a) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 140.8821259842522977 Td
+(versao 7.0.2 de 3 de novembro, conferidos em 7 de novembro de 2026  3\) A skill dele lista o que nao vale como prova: a rodada) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 130.6774015748035254 Td
+(anterior, o deve passar, o linter passou e o subagente que disse que deu certo  /plugin install superpowers@claude-plugins-official ) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 120.472677165354753 Td
+(https://github.com/obra/superpowers/tree/main/skills/verification-before-completion) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 98.9293700787404759 Td
+(4. Mande o Claude abrir e usar o que ele fez) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 85.8900000000002137 Td
+(Teste passando nao prova que o app funciona, e por isso o Claude Code traz o /verify, que compila, abre e usa o seu app pra confirmar) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 75.6852755905513277 Td
+(que a mudanca faz o que devia. O /run abre o app pra voce ver, e o /run-skill-generator grava a receita de como subir o projeto, pra todo) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 11002
+>>
+stream
+0.5670000000000001 w
+0.91 0.39 0.04 RG
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 785.1970866141732586 Td
+(agente seguir a mesma. E o que o Boris descreve na dica 13 da thread dele: cada mudanca que ele sobe no claude.ai/code e testada) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 774.9923622047243725 Td
+(pelo Claude no Chrome, que abre o navegador, testa a interface e repete ate o codigo funcionar.  1\) O /verify grava o que funcionou em) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 764.7876377952756002 Td
+(.claude/skills/verify/SKILL.md, e desde a versao 2.1.286 uma skill verify na pasta faz o Claude rodar a conferencia antes de cada) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 754.5829133858267141 Td
+(commit  2\) Site e landing page: o claude --chrome da ao Claude o seu navegador, com print, console e clique  3\) App nativo, simulador) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 744.3781889763779418 Td
+(do iPhone ou programa sem API: o computer use, que voce liga no /mcp, no servidor computer-use  /run-skill-generator) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 734.1734645669290558 Td
+(/verify) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 713.7640157480313974 Td
+(# no terminal, pra ele usar o seu navegador) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 703.559291338582625 Td
+(claude --chrome  https://code.claude.com/docs/en/chrome) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 682.0159842519684616 Td
+(5. Ponha uma meta com o /goal) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 668.9766141732283131 Td
+(O /goal e o loop com um juiz de fora: voce escreve a condicao de pronto e, depois de cada volta, um modelo separado le a conversa e) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 658.7718897637794271 Td
+(decide se ela foi cumprida, se ainda falta ou se e impossivel. Enquanto falta, o Claude comeca outra volta sozinho, com o motivo do juiz) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 648.5671653543306547 Td
+(como proxima instrucao. Como o juiz nao roda comando nem abre arquivo, escreva a condicao como algo que a saida do proprio) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 638.3624409448818824 Td
+(Claude mostra na conversa.  1\) Uma meta por sessao, com ate 4.000 caracteres  2\) O /goal sozinho mostra a condicao, o tempo, as) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 628.15771653543311 Td
+(voltas, os tokens e o ultimo motivo do juiz  3\) Pra rodar sem voce aprovar cada comando, use junto com o auto mode  4\) Fora da) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 617.952992125984224 Td
+(conversa, o claude -p com o /goal no pedido roda o loop inteiro numa chamada so  /goal npm test sai com 0, o lint esta limpo e nenhum) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 607.7482677165354517 Td
+(outro arquivo de teste mudou, ou pare depois de 20 voltas) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 587.3388188976377933 Td
+(# mostra o andamento e tira a meta) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 577.1340944881890209 Td
+(/goal) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 566.9293700787402486 Td
+(/goal clear  https://code.claude.com/docs/en/goal) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 545.3860629921260852 Td
+(6. Trave a saida com um Stop hook) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 532.3466929133859367 Td
+(O Stop hook e a versao sem excecao: um comando seu que roda toda vez que o Claude tenta encerrar a vez, e quando ele sai com) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 522.1419685039370506 Td
+(codigo 2 o Claude volta ao trabalho com o que o comando escreveu como motivo. Quem garante e o proprio Claude Code, nao o) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 511.9372440944883351 Td
+(modelo, entao a vez nao termina enquanto a checagem falha. O exemplo da documentacao trava no typecheck, e voce troca pelo teste) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 501.7325196850395059 Td
+(do seu projeto.  1\) Depois de 8 continuacoes seguidas sem nenhuma ferramenta usada no meio, o Claude Code libera a parada, e a) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 491.5277952755907336 Td
+(variavel CLAUDE_CODE_STOP_HOOK_BLOCK_CAP muda esse teto  2\) O /hooks mostra os hooks que carregaram  3\) No lugar do) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 481.3230708661419044 Td
+(comando da pra usar um hook do tipo prompt, em que outro modelo decide, ou do tipo agent, ainda experimental, que abre um) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 471.1183464566930752 Td
+(subagente com ferramentas pra conferir  4\) Pra testar, peca uma mudanca que quebra um tipo: em vez de terminar, ele recebe o erro) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 460.913622047244246 Td
+(do compilador e continua  # Stop hook do exemplo oficial: o Claude so termina a vez com o typecheck passando) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 450.7088976377954737 Td
+(# \(troque pnpm tsc --noEmit pelo teste do seu projeto, como npm test\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 440.5041732283466445 Td
+(mkdir -p .claude) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 430.2994488188978721 Td
+(cat > .claude/settings.json <<'JSON') Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 420.0947244094490429 Td
+({) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 409.8900000000002706 Td
+(  "hooks": {) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 399.6852755905514414 Td
+(    "Stop": [) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 389.4805511811026122 Td
+(      {) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 379.2758267716538398 Td
+(        "hooks": [) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 369.0711023622050106 Td
+(          { "type": "command", "command": "pnpm tsc --noEmit 1>&2 || exit 2" }) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 358.8663779527562383 Td
+(        ]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 348.6616535433074091 Td
+(      }) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 338.4569291338586368 Td
+(    ]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 328.2522047244098076 Td
+(  }) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 318.0474803149610352 Td
+(}) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 307.8427559055122629 Td
+(JSON  Atalho: Hook e pra regra sem excecao, e preferencia fica no CLAUDE.md, porque todo hook as vezes dispara quando nao devia) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 297.6380314960633768 Td
+(e alguem tem que manter cada um.  https://code.claude.com/docs/en/hooks-guide) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 276.0947244094492135 Td
+(7. O exemplo do video: monte o conferidor de video) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 263.0553543307090649 Td
+(O Claude nao assiste video: a ferramenta de leitura dele abre imagem, PDF e texto, e e por isso que ele entrega a edicao sem ter visto) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 252.8506299212602926 Td
+(1 segundo. O conferidor abaixo da os olhos e os ouvidos que faltam, so com o Python e o ffmpeg: mede o comeco, as pausas, o fim, a) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 242.6459055118115202 Td
+(tela preta, a imagem parada, o volume e os cortes, compara o roteiro com o que se ouve e monta as folhas de quadros que o Claude) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 232.4411811023627479 Td
+(abre como imagem. Ele grava conferencia/RELATORIO.md e sai com 0 quando aprova e com 1 quando tem conserto.  1\) Rodou em 7) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 222.2364566929138618 Td
+(de novembro num video de 92 s em 30 s, ja com a sonda, e gerou 4 folhas de quadros e 1 imagem por corte  2\) Cada folha_NN.jpg tem) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 212.0317322834650895 Td
+(12 quadros, 1 a cada 2 s, e cada corte_NN.jpg mostra 0,2 s antes e 0,2 s depois do corte, lado a lado  3\) Com --roteiro e --ouvido ele) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 201.8270078740163171 Td
+(compara palavra por palavra, e numero falado por extenso, de zero a mil, bate com o digito, como dez com 10  4\) A transcricao do) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 191.6222834645674311 Td
+(render vem da ferramenta que voce ja usa, como o ElevenLabs Scribe ou o Whisper, salva em ouvido.txt  5\) No Windows, o ffmpeg) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 181.4175590551186588 Td
+(entra com winget install Gyan.FFmpeg, e os comandos rodam no Git Bash, o mesmo terminal que os hooks usam la  # Mac: o ffmpeg,) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 171.2128346456698864 Td
+(uma vez so) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 161.0081102362211141 Td
+(brew install ffmpeg) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 140.5986614173234557 Td
+(# cria o conferidor na pasta do projeto de edicao) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 130.3939370078746833 Td
+(cat > conferir_video.py <<'PY') Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 120.1892125984257973 Td
+(#!/usr/bin/env python3) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 109.9844881889769113 Td
+(# -*- coding: utf-8 -*-) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 99.7797637795280252 Td
+(# conferir_video.py: o jeito do Claude ver o video que ele mesmo editou.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 89.5750393700792529 Td
+(# uso: python3 conferir_video.py final.mp4 [--roteiro roteiro.txt] [--ouvido transcricao.txt]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 79.3703149606303668 Td
+(#      [--formato 1080x1920] [--pausa 0.6] [--sonda]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 69.1655905511814808 Td
+(# Grava conferencia/RELATORIO.md, as folhas de quadros e 1 imagem por corte.) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 9612
+>>
+stream
+0.5670000000000001 w
+0.91 0.39 0.04 RG
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 785.1970866141732586 Td
+(# Sai com 0 quando esta tudo certo e com 1 quando tem o que consertar. So precisa do Python 3 e do ffmpeg.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 774.9923622047243725 Td
+(import argparse, difflib, json, re, shutil, subprocess, sys, tempfile) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 764.7876377952756002 Td
+(from pathlib import Path) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 744.3781889763779418 Td
+(NUM = {"zero": "0", "um": "1", "uma": "1", "dois": "2", "duas": "2", "tres": "3", "tres": "3", "quatro": "4",) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 734.1734645669290558 Td
+(       "cinco": "5", "seis": "6", "sete": "7", "oito": "8", "nove": "9", "dez": "10", "onze": "11", "doze": "12",) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 723.9687401574802834 Td
+(       "treze": "13", "catorze": "14", "quatorze": "14", "quinze": "15", "dezesseis": "16", "dezessete": "17",) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 713.7640157480313974 Td
+(       "dezoito": "18", "dezenove": "19", "vinte": "20", "trinta": "30", "quarenta": "40", "cinquenta": "50",) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 703.559291338582625 Td
+(       "sessenta": "60", "setenta": "70", "oitenta": "80", "noventa": "90", "cem": "100", "mil": "1000"}) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 683.1498425196849666 Td
+(def rodar\(cmd\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 672.9451181102360806 Td
+(    return subprocess.run\(cmd, capture_output=True, text=True\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 652.5356692913385359 Td
+(def ff\(video, *filtro\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 642.3309448818897636 Td
+(    return rodar\(["ffmpeg", "-nostdin", "-hide_banner", "-i", str\(video\), *filtro, "-f", "null", "-"]\).stderr) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 621.9214960629921052 Td
+(def info\(video\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 611.7167716535433328 Td
+(    d = json.loads\(rodar\(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type,width,height,r_frame_rate",) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 601.5120472440944468 Td
+(                          "-of", "json", str\(video\)]\).stdout\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 591.3073228346456744 Td
+(    v = next\(\(s for s in d["streams"] if s["codec_type"] == "video"\), {}\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 581.1025984251969021 Td
+(    n, _, m = v.get\("r_frame_rate", "0/1"\).partition\("/"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 570.8978740157481298 Td
+(    return float\(d["format"]["duration"]\), v.get\("width"\), v.get\("height"\), float\(n\) / float\(m or 1\), \\) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 560.6931496062993574 Td
+(        any\(s["codec_type"] == "audio" for s in d["streams"]\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 540.283700787401699 Td
+(def silencios\(video, dur\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 530.078976377952813 Td
+(    err = ff\(video, "-vn", "-af", "silencedetect=noise=-35dB:d=0.05"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 519.8742519685040406 Td
+(    ini = [float\(x\) for x in re.findall\(r"silence_start: \(-?[\\d.]+\)", err\)]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 509.6695275590552683 Td
+(    fim = [float\(x\) for x in re.findall\(r"silence_end: \([\\d.]+\)", err\)]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 499.4648031496064391 Td
+(    return [\(max\(a, 0.0\), fim[i] if i < len\(fim\) else dur\) for i, a in enumerate\(ini\)]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 479.0553543307088376 Td
+(def pretos\(video\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 468.8506299212600652 Td
+(    err = ff\(video, "-an", "-vf", "blackdetect=d=0.1:pix_th=0.10"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 458.645905511811236 Td
+(    return [\(float\(a\), float\(b\)\) for a, b in re.findall\(r"black_start:\([\\d.]+\) black_end:\([\\d.]+\)", err\)]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 438.2364566929136345 Td
+(def congelados\(video\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 428.0317322834648053 Td
+(    err = ff\(video, "-an", "-vf", "freezedetect=n=0.003:d=2"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 417.8270078740160329 Td
+(    return [float\(x\) for x in re.findall\(r"freeze_start: \([\\d.]+\)", err\)]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 397.4175590551184314 Td
+(def volume\(video\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 387.2128346456696022 Td
+(    err = ff\(video, "-vn", "-af", "ebur128=peak=true"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 377.0081102362208298 Td
+(    i, p = re.findall\(r"I: \(-?[\\d.]+\) LUFS", err\), re.findall\(r"Peak: \(-?[\\d.]+\) dBFS", err\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 366.8033858267720007 Td
+(    return \(float\(i[-1]\) if i else None\), \(float\(p[-1]\) if p else None\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 346.3939370078743991 Td
+(def cortes\(video\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 336.1892125984255699 Td
+(    err = ff\(video, "-an", "-vf", "select='gt\(scene,0.35\)',showinfo"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 325.9844881889767976 Td
+(    return [float\(x\) for x in re.findall\(r"pts_time:\([\\d.]+\)", err\)]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 305.5750393700791392 Td
+(def palavras\(texto\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 295.3703149606303668 Td
+(    return [NUM.get\(w, w\) for w in re.findall\(r"[\\w']+", texto.lower\(\)\)]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 274.9608661417328221 Td
+(def plantar_erro\(video, dur, pasta\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 264.7561417322839361 Td
+(    # sonda: copia 10 s do meio do video com 1,5 s de tela preta e silencio plantados em 5 s) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 254.5514173228351638 Td
+(    sonda, ini = pasta / "sonda.mp4", max\(dur / 2 - 5, 0\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 244.3466929133863914 Td
+(    rodar\(["ffmpeg", "-nostdin", "-loglevel", "error", "-y", "-ss", f"{ini:.2f}", "-t", "10", "-i", str\(video\),) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 234.1419685039375054 Td
+(           "-vf", "drawbox=enable='between\(t,5,6.5\)':color=black:t=fill", "-af", "volume=enable='between\(t,5,6.5\)':volume=0",) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 223.937244094488733 Td
+(           "-c:v", "libx264", "-preset", "ultrafast", "-c:a", "aac", str\(sonda\)]\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 213.7325196850399607 Td
+(    return sonda) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 193.3230708661423023 Td
+(def main\(\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 183.1183464566935299 Td
+(    ap = argparse.ArgumentParser\(\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 172.9136220472447576 Td
+(    ap.add_argument\("video"\); ap.add_argument\("--roteiro"\); ap.add_argument\("--ouvido"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 162.7088976377959852 Td
+(    ap.add_argument\("--formato", help="ex.: 1080x1920"\); ap.add_argument\("--pausa", type=float, default=0.6\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 152.5041732283470992 Td
+(    ap.add_argument\("--saida", default="conferencia"\); ap.add_argument\("--sonda", action="store_true"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 142.2994488188983269 Td
+(    a = ap.parse_args\(\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 132.0947244094495545 Td
+(    video, out = Path\(a.video\), Path\(a.saida\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 121.8900000000006685 Td
+(    shutil.rmtree\(out, ignore_errors=True\); out.mkdir\(parents=True\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 111.6852755905517824 Td
+(    falhas, avisos, rel = [], [], [f"# Conferencia de {video.name}", ""]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 91.2758267716540104 Td
+(    dur, w, h, fps, tem_audio = info\(video\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 81.0711023622051243 Td
+(    imagem = f"{w}x{h}, {fps:.2f} quadros por segundo" if w else "sem imagem") Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 70.866377952756352 Td
+(    rel += ["## Arquivo", f"{dur:.2f} s, {imagem}, audio: {'sim' if tem_audio else 'NAO'}", ""]) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 10678
+>>
+stream
+0.5670000000000001 w
+0.91 0.39 0.04 RG
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 785.1970866141732586 Td
+(    if a.formato and f"{w}x{h}" != a.formato: falhas.append\(f"formato {w}x{h}, o pedido era {a.formato}"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 774.9923622047243725 Td
+(    if w and h and abs\(w / h - 9 / 16\) > 0.01: avisos.append\(f"proporcao {w}x{h} nao e 9:16"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 764.7876377952756002 Td
+(    if not tem_audio: falhas.append\("o video nao tem audio"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 744.3781889763779418 Td
+(    if tem_audio:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 734.1734645669290558 Td
+(        sil = silencios\(video, dur\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 723.9687401574802834 Td
+(        comeco = next\(\(b for x, b in sil if x <= 0.01\), 0.0\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 713.7640157480313974 Td
+(        final = next\(\(dur - x for x, b in sil if b >= dur - 0.01\), 0.0\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 703.559291338582625 Td
+(        internas = [\(x, b\) for x, b in sil if x > 0.01 and b < dur - 0.01 and b - x > a.pausa]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 693.3545669291338527 Td
+(        rel += ["## Fala, comeco e fim", f"Primeira fala em {comeco:.2f} s. Depois da ultima fala sobram {final:.2f} s.",) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 683.1498425196849666 Td
+(                f"Pausas acima de {a.pausa} s no meio: {len\(internas\)}"]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 672.9451181102360806 Td
+(        rel += [f"- {x:.2f} s a {b:.2f} s \({b - x:.2f} s de silencio\)" for x, b in internas] + [""]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 662.7403937007873083 Td
+(        if comeco > 0.5: falhas.append\(f"a fala so comeca em {comeco:.2f} s"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 652.5356692913385359 Td
+(        if final > 1.2: falhas.append\(f"sobram {final:.2f} s de silencio no fim"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 642.3309448818897636 Td
+(        if final < 0.08: avisos.append\("o audio termina colado na ultima fala: confira se a ultima palavra saiu inteira"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 632.1262204724408775 Td
+(        falhas += [f"espaco demais: {b - x:.2f} s de silencio em {x:.2f} s" for x, b in internas]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 621.9214960629921052 Td
+(        lufs, pico = volume\(video\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 611.7167716535433328 Td
+(        rel += ["## Volume", f"Integrado: {lufs} LUFS. Pico: {pico} dBFS.", ""]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 601.5120472440944468 Td
+(        if lufs is not None and not -16 <= lufs <= -12: avisos.append\(f"volume integrado em {lufs} LUFS, fora da faixa de -16 a -12"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 591.3073228346456744 Td
+(        if pico is not None and pico > -1: avisos.append\(f"pico em {pico} dBFS, acima de -1"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 570.8978740157481298 Td
+(    pr = [\(x, b\) for x, b in pretos\(video\) if x > 0.05 and b < dur - 0.05]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 560.6931496062993574 Td
+(    falhas += [f"tela preta de {b - x:.2f} s em {x:.2f} s" for x, b in pr]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 550.4884251968504714 Td
+(    avisos += [f"imagem parada por 2 s ou mais a partir de {x:.2f} s" for x in congelados\(video\)]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 530.078976377952813 Td
+(    cs = cortes\(video\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 519.8742519685040406 Td
+(    rel += ["## Cortes", f"{len\(cs\)} cortes de imagem. Cada corte_NN.jpg mostra 0,2 s antes a esquerda e 0,2 s depois a direita."]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 509.6695275590552683 Td
+(    for i, t in enumerate\(cs, 1\):) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 499.4648031496064391 Td
+(        rel.append\(f"- corte {i:02d}: {t:.2f} s"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 489.2600787401576667 Td
+(        rodar\(["ffmpeg", "-nostdin", "-loglevel", "error", "-ss", f"{max\(t - 0.2, 0\):.2f}", "-i", str\(video\), "-ss", f"{t + 0.2:.2f}",) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 479.0553543307088376 Td
+(               "-i", str\(video\), "-filter_complex", "[0:v]scale=360:-2[a];[1:v]scale=360:-2[b];[a][b]hstack", "-frames:v", "1",) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 468.8506299212600652 Td
+(               "-q:v", "4", str\(out / f"corte_{i:02d}.jpg"\)]\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 458.645905511811236 Td
+(    rodar\(["ffmpeg", "-nostdin", "-loglevel", "error", "-i", str\(video\), "-vf", "fps=1/2,scale=270:-2,tile=4x3", "-q:v", "4",) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 448.4411811023624637 Td
+(           str\(out / "folha_%02d.jpg"\)]\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 438.2364566929136345 Td
+(    rel += ["", "## Folhas de quadros", "1 quadro a cada 2 s, 12 por folha, da esquerda pra direita e de cima pra baixo: ") Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 428.0317322834648053 Td
+(            "a folha_01 vai de 0 a 22 s, a folha_02 de 24 a 46 s, e assim por diante.", ""]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 407.6222834645672037 Td
+(    if a.roteiro and a.ouvido:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 397.4175590551184314 Td
+(        e, o = palavras\(Path\(a.roteiro\).read_text\(\)\), palavras\(Path\(a.ouvido\).read_text\(\)\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 387.2128346456696022 Td
+(        dif = [\(op, " ".join\(e[i1:i2]\), " ".join\(o[j1:j2]\)\) for op, i1, i2, j1, j2 in) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 377.0081102362208298 Td
+(               difflib.SequenceMatcher\(a=e, b=o, autojunk=False\).get_opcodes\(\) if op != "equal"]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 366.8033858267720007 Td
+(        rel += ["## Roteiro contra o que se ouve", f"Esperadas {len\(e\)} palavras, ouvidas {len\(o\)}. Diferencas: {len\(dif\)}"]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 356.5986614173232283 Td
+(        nome = {"replace": "trocou", "delete": "faltou", "insert": "sobrou"}) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 346.3939370078743991 Td
+(        rel += [f"- {nome[op]}: esperado '{x}', ouvido '{y}'" for op, x, y in dif] + [""]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 336.1892125984255699 Td
+(        falhas += [f"fala diferente do roteiro: esperado '{x}', ouvido '{y}'" for op, x, y in dif]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 315.7797637795280252 Td
+(    if a.sonda:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 305.5750393700791392 Td
+(        with tempfile.TemporaryDirectory\(\) as tmp:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 295.3703149606303668 Td
+(            s = plantar_erro\(video, dur, Path\(tmp\)\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 285.1655905511815945 Td
+(            pegou_preto = any\(4.8 <= x <= 5.2 for x, b in pretos\(s\)\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 274.9608661417328221 Td
+(            pegou_som = any\(4.8 <= x <= 5.2 and b - x > a.pausa for x, b in silencios\(s, 10.0\)\) if tem_audio else True) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 264.7561417322839361 Td
+(        ok = pegou_preto and pegou_som) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 254.5514173228351638 Td
+(        rel += ["## Sonda", f"Erro plantado \(1,5 s de tela preta e silencio\): {'pego' if ok else 'NAO foi pego'}", ""]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 244.3466929133863914 Td
+(        if not ok: falhas.append\("a sonda com erro plantado passou sem ser pega: a conferencia esta cega"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 223.937244094488733 Td
+(    rel += ["## Avisos"] + [f"- {x}" for x in avisos] + ["", "## Veredito"]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 213.7325196850399607 Td
+(    rel += ["APROVADO"] if not falhas else ["CONSERTAR"] + [f"- {x}" for x in falhas]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 203.5277952755911883 Td
+(    \(out / "RELATORIO.md"\).write_text\("\\n".join\(rel\) + "\\n"\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 193.3230708661423023 Td
+(    print\("\\n".join\(rel\)\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 183.1183464566935299 Td
+(    sys.exit\(1 if falhas else 0\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 162.7088976377959852 Td
+(if __name__ == "__main__":) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 152.5041732283470992 Td
+(    main\(\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 142.2994488188983269 Td
+(PY) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 121.8900000000006685 Td
+(# confere o render, com a sonda que planta um erro pra provar que ele enxerga) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 111.6852755905517824 Td
+(python3 conferir_video.py render/final.mp4 --formato 1080x1920 --sonda  Atalho: Com musica por baixo, a pausa some na medicao,) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 101.4805511811028964 Td
+(porque a trilha preenche o silencio: no video de teste de 92 s, com musica, ele achou 0 pausas. Confira a pausa na voz antes da) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 91.2758267716540104 Td
+(mixagem, rodando o mesmo script no arquivo de audio so da voz.  https://formulae.brew.sh/formula/ffmpeg) Tj
+ET
+endstream
+endobj
+11 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 12 0 R
+>>
+endobj
+12 0 obj
+<<
+/Length 10191
+>>
+stream
+0.5670000000000001 w
+0.91 0.39 0.04 RG
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 785.1970866141732586 Td
+(8. Teste o conferidor com um erro plantado) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 772.1577165354329964 Td
+(Conferencia que nunca reprova nao esta conferindo nada, entao antes de confiar nela, plante um erro e veja se ela pega. O --sonda faz) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 761.952992125984224 Td
+(isso sozinho: copia 10 s do meio do video com 1,5 s de tela preta e silencio e confere a copia, e se o erro passar, o veredito vira) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 751.748267716535338 Td
+(CONSERTAR com o aviso de que a conferencia esta cega. No teste de 7 de novembro, num trecho de 12 s com 5 erros plantados a) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 741.5435433070865656 Td
+(mao, ele pegou os 5.  1\) Os 5 do teste: o formato 720x1280 no lugar de 1080x1920, a fala comecando em 0,81 s, 1,30 s de silencio em) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 731.3388188976377933 Td
+(4,02 s, 0,43 s de tela preta em 8,00 s e a palavra comment trocada por come and na transcricao  2\) O mesmo trecho sem os erros, em) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 721.1340944881889072 Td
+(1080x1920, saiu APROVADO  3\) Achou na mao um erro que a conferencia deixou passar: ele vira checagem nova no script e um erro) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 710.9293700787401349 Td
+(plantado novo, com o prompt 10  # cria uma copia de 12 s com 3 erros: 0,8 s mudo no comeco, 1,3 s de silencio no meio e 0,4 s de tela) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 700.7246456692912489 Td
+(preta) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 690.5199212598424765 Td
+(ffmpeg -y -t 12 -i render/final.mp4 \\) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 680.3151968503935905 Td
+(  -vf "drawbox=enable='between\(t,8,8.4\)':color=black:t=fill" \\) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 670.1104724409448181 Td
+(  -af "volume=enable='between\(t,0,0.8\)+between\(t,4,5.3\)':volume=0" \\) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 659.9057480314959321 Td
+(  -c:v libx264 -c:a aac teste-com-erro.mp4) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 639.4962992125983874 Td
+(# tem que sair CONSERTAR, com os 3 erros na lista, e a sonda pega) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 629.291574803149615 Td
+(python3 conferir_video.py teste-com-erro.mp4 --saida conferencia-teste --sonda) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 607.7482677165354517 Td
+(9. Ligue o conferidor num Stop hook da pasta de edicao) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 594.7088976377953031 Td
+(Com o hook, o Claude nao consegue encerrar a vez com o render reprovado: toda vez que ele tenta parar, o script pega o MP4 mais) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 584.5041732283464171 Td
+(novo da pasta render, roda a conferencia e, se reprovar, devolve o veredito com codigo 2 e ele volta pra consertar. Se a pasta tem) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 574.2994488188976447 Td
+(roteiro.txt, o hook tambem exige a transcricao do render novo em ouvido.txt antes de deixar terminar. Ele rodou em 7 de novembro nos) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 564.0947244094488724 Td
+(7 casos: sem render, render ruim, render bom, roteiro sem transcricao, palavra trocada, transcricao batendo e render ja aprovado.  1\) O) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 553.8900000000001 Td
+(hook usa a forma com args, que a documentacao recomenda quando o caminho usa a variavel CLAUDE_PROJECT_DIR, porque ela) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 543.6852755905513277 Td
+(aguenta pasta com espaco no nome  2\) Render aprovado ganha o arquivo conferencia/APROVADO, e o hook nao confere de novo) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 533.4805511811024417 Td
+(enquanto nao sair um MP4 mais novo  3\) O timeout de 600 s e o padrao do hook de comando, e a conferencia do video de 92 s levou) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 523.2758267716536693 Td
+(30 s  4\) Se o .claude/settings.json ja existe, peca pro Claude juntar o bloco hooks em vez de sobrescrever o arquivo  # na pasta do) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 513.0711023622047833 Td
+(projeto de edicao, com o conferir_video.py na raiz) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 502.8663779527560109 Td
+(mkdir -p .claude/hooks) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 492.6616535433072386 Td
+(cat > .claude/hooks/conferir-video.sh <<'SH') Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 482.4569291338584094 Td
+(#!/bin/bash) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 472.252204724409637 Td
+(# Stop hook: o Claude so termina quando o render mais novo passa na conferencia) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 462.0474803149608078 Td
+(cd "$CLAUDE_PROJECT_DIR" || exit 0) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 451.8427559055120355 Td
+(VIDEO=$\(ls -t render/*.mp4 2>/dev/null | head -1\)) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 441.6380314960632063 Td
+([ -z "$VIDEO" ] && exit 0) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 431.433307086614434 Td
+([ -f conferencia/APROVADO ] && [ conferencia/APROVADO -nt "$VIDEO" ] && exit 0) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 421.2285826771656048 Td
+(EXTRA="") Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 411.0238582677167756 Td
+(if [ -f roteiro.txt ]; then) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 400.8191338582680032 Td
+(  if [ ! -f ouvido.txt ] || [ ouvido.txt -ot "$VIDEO" ]; then) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 390.614409448819174 Td
+(    echo "Transcreva o render $VIDEO em ouvido.txt antes de terminar, pra conferencia comparar com o roteiro.txt." >&2) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 380.4096850393704017 Td
+(    exit 2) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 370.2049606299215725 Td
+(  fi) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 360.0002362204728001 Td
+(  EXTRA="--roteiro roteiro.txt --ouvido ouvido.txt") Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 349.7955118110239709 Td
+(fi) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 339.5907874015751986 Td
+(if python3 conferir_video.py "$VIDEO" --formato 1080x1920 $EXTRA > .claude/ultima-conferencia.txt 2>&1; then) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 329.3860629921263126 Td
+(  touch conferencia/APROVADO; exit 0) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 319.1813385826775402 Td
+(fi) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 308.9766141732287679 Td
+(tail -25 .claude/ultima-conferencia.txt >&2) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 298.7718897637799955 Td
+(echo "O render $VIDEO nao passou na conferencia. Leia conferencia/RELATORIO.md, abra as folhas e os cortes, conserte e renderize) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 288.5671653543311095 Td
+(de novo." >&2) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 278.3624409448823371 Td
+(exit 2) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 268.1577165354335648 Td
+(SH) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 257.9529921259847924 Td
+(chmod +x .claude/hooks/conferir-video.sh) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 237.5435433070871341 Td
+(# liga o hook no projeto) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 227.3388188976383617 Td
+(cat > .claude/settings.json <<'JSON') Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 217.1340944881894757 Td
+({) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 206.9293700787407033 Td
+(  "hooks": {) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 196.724645669291931 Td
+(    "Stop": [) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 186.5199212598431586 Td
+(      {) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 176.3151968503942726 Td
+(        "hooks": [) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 166.1104724409455002 Td
+(          { "type": "command", "command": "bash", "args": ["${CLAUDE_PROJECT_DIR}/.claude/hooks/conferir-video.sh"], "timeout": 600 }) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 155.9057480314967279 Td
+(        ]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 145.7010236220479555 Td
+(      }) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 135.4962992125990695 Td
+(    ]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 125.2915748031502972 Td
+(  }) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 115.0868503937014111 Td
+(}) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 104.8821259842525251 Td
+(JSON  Atalho: O teto de 8 continuacoes seguidas conta so quando o Claude tenta parar sem usar ferramenta no meio. Renderizar de) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 94.6774015748036391 Td
+(novo zera a conta, entao o ciclo de consertar e renderizar segue ate aprovar.  https://code.claude.com/docs/en/hooks) Tj
+ET
+endstream
+endobj
+13 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 14 0 R
+>>
+endobj
+14 0 obj
+<<
+/Length 9414
+>>
+stream
+0.5670000000000001 w
+0.91 0.39 0.04 RG
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 785.1970866141732586 Td
+(10. Ponha um revisor que nao escreveu o trabalho) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 772.1577165354329964 Td
+(Quem escreveu o codigo carrega o raciocinio que usou, e um revisor que nao viu a conversa nao tem esse vies. O /code-review revisa) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 761.952992125984224 Td
+(as mudancas da sua branch e funciona em qualquer plano, e pra revisar contra a sua especificacao, ou revisar o que nao e codigo,) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 751.748267716535338 Td
+(como a legenda ou o anuncio, voce cria um subagente revisor so com as ferramentas de leitura.  1\) Peca assim: use o subagente) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 741.5435433070865656 Td
+(revisor pra conferir o que foi feito contra o SPEC.md  2\) A documentacao manda manter o ignore estilo no pedido, porque um revisor) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 731.3388188976377933 Td
+(pedido pra achar problema sempre acha alguma coisa, e consertar tudo enche o projeto de camada e teste inutil  3\) Uma segunda) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 721.1340944881889072 Td
+(sessao do Claude Code tambem serve de revisor, ja que ela le o arquivo sem ter visto ele ser escrito  # o revisor pronto do Claude) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 710.9293700787401349 Td
+(Code: revisa a branch num subagente que nao viu a conversa) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 700.7246456692912489 Td
+(/code-review) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 680.3151968503935905 Td
+(# um revisor de fora, so com ferramentas de leitura, pra qualquer entrega) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 670.1104724409448181 Td
+(mkdir -p .claude/agents) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 659.9057480314959321 Td
+(cat > .claude/agents/revisor.md <<'MD') Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 649.7010236220471597 Td
+(---) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 639.4962992125983874 Td
+(name: revisor) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 629.291574803149615 Td
+(description: Revisa uma entrega contra a especificacao e a regua do projeto, sem ter visto como ela foi feita. Use antes de dizer que) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 619.086850393700729 Td
+(terminou.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 608.8821259842519567 Td
+(tools: Read, Glob, Grep) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 598.6774015748031843 Td
+(---) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 578.2679527559055259 Td
+(Voce e o revisor. Leia a especificacao ou a regua que te passarem e confira a entrega item por item.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 568.0632283464567536 Td
+(Para cada item, responda passou ou falhou, com o trecho ou o arquivo que prova.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 557.8585039370079812 Td
+(Aponte so o que afeta o resultado e ignore preferencia de estilo.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 547.6537795275592089 Td
+(Termine com APROVADO ou CONSERTAR e a lista do que falta.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 537.4490551181103228 Td
+(MD  https://code.claude.com/docs/en/sub-agents) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 515.9057480314961595 Td
+(11. Deixe rodar sozinho, com limite e com alguem aprovando no fim) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 502.8663779527560109 Td
+(Com o loop fechado, o Claude leva a tarefa ate o fim sem voce, e e isso que o Boris descreve quando diz que nao fala mais com um) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 492.6616535433072386 Td
+(agente, fala com um loop ou com uma rotina que faz os prompts por ele. Antes de soltar, a documentacao pede 5 respostas: o que e) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 482.4569291338584094 Td
+(pronto, como ele confere, o que pode mexer, o que faz ele parar e quem aprova o resultado. O comando abaixo roda um pedido por) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 472.252204724409637 Td
+(video, com teto de voltas e de gasto.  1\) O --max-turns encerra a chamada com erro quando passa do teto, e o --max-budget-usd para) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 462.0474803149608078 Td
+(quando o gasto estimado chega no valor  2\) O /loop repete um prompt num intervalo enquanto a sessao esta aberta, e o /schedule cria) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 451.8427559055120355 Td
+(uma tarefa agendada na nuvem, que roda com o notebook fechado  3\) O que nao volta atras, como publicar, subir campanha, agendar) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 441.6380314960632063 Td
+(post ou fazer deploy, fica com uma pessoa aprovando  # um pedido por video da pasta brutos, cada um com teto de 30 voltas e de US$) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 431.433307086614434 Td
+(3 de gasto estimado) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 421.2285826771656048 Td
+(for v in brutos/*.mp4; do) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 411.0238582677167756 Td
+(  claude -p "/goal edite $v seguindo o CLAUDE.md, renderize em render/ e rode a conferencia ate o relatorio terminar em APROVADO,) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 400.8191338582680032 Td
+(ou pare depois de 8 voltas" \\) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 390.614409448819174 Td
+(    --permission-mode auto --max-turns 30 --max-budget-usd 3) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 380.4096850393704017 Td
+(done) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 360.0002362204728001 Td
+(# dentro de uma sessao aberta: repete a checagem a cada 15 minutos) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 349.7955118110239709 Td
+(/loop 15m confira o CI desta branch e, se estiver vermelho, leia o log, conserte e suba  https://code.claude.com/docs/en/headless) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0.118 g
+56.6929133858267775 326.8348818897641195 Td
+(Os 4 jeitos de fechar o loop, e quem decide em cada um) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 306.9923622047248273 Td
+(Da documentacao oficial do Claude Code, conferida em 7 de novembro de 2026 na versao 2.1.319. Quanto mais pra) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 294.2364566929137482 Td
+(baixo na lista, menos o resultado depende do modelo lembrar.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 270.1419685039373917 Td
+(1. No pedido) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 257.1025984251972432 Td
+(Voce diz o que conta como pronto e pede a prova, como rodar os testes no fim e continuar ate passarem. Funciona hoje em qualquer) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 246.8978740157484708 Td
+(tarefa, sem configurar nada.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 225.3545669291343074 Td
+(2. O /goal) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 212.3151968503941589 Td
+(Um modelo separado le a conversa depois de cada volta e manda continuar ate a condicao valer. Pesa mais em tarefa longa, quando o) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 202.1104724409452729 Td
+(Claude as vezes fecha a vez com um resumo e ainda tem item aberto.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 180.5671653543311095 Td
+(3. O Stop hook) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 167.527795275590961 Td
+(O seu comando roda toda vez que o Claude tenta parar, e o codigo 2 manda ele de volta. A vez nao termina enquanto a checagem) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 157.3230708661421886 Td
+(falha, ate o teto de 8 continuacoes seguidas.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 135.7797637795280252 Td
+(4. O revisor de fora) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 122.7403937007878767 Td
+(O /code-review, um subagente revisor ou uma segunda sessao leem o resultado sem ter visto o raciocinio que produziu ele.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 101.1970866141737133 Td
+(5. O /verify, junto com qualquer um) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 88.1577165354335648 Td
+(Compila, abre e usa o app pra ver se a mudanca funciona, e pega o que o teste e a checagem de tipo deixam passar.) Tj
+ET
+endstream
+endobj
+15 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 16 0 R
+>>
+endobj
+16 0 obj
+<<
+/Length 7234
+>>
+stream
+0.5670000000000001 w
+0.91 0.39 0.04 RG
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0.118 g
+56.6929133858267775 785.1970866141732586 Td
+(O loop em cada trabalho: a checagem que volta passou ou falhou) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 765.3545669291338527 Td
+(Pra engenharia, programacao, trafego pago e copywriting, e tambem pra edicao de video e site: o que da olhos pro) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 752.5986614173227736 Td
+(Claude em cada trabalho e o que ele confere antes de dizer que terminou.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 728.5041732283464171 Td
+(Edicao de video) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 715.4648031496062686 Td
+(O comeco, as pausas, o fim, a tela preta, o volume e o roteiro contra o que se ouve, pelo script, e a legenda em cima do rosto e o corte) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 705.2600787401574962 Td
+(no lugar errado, pelas folhas de quadros que ele abre como imagem.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 683.7167716535432191 Td
+(Programacao) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 670.6774015748030706 Td
+(O teste que reproduz o bug falhando antes e passando depois, o build saindo com 0 e o typecheck limpo, travados num Stop hook.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 649.1340944881889072 Td
+(Engenharia de produto) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 636.0947244094487587 Td
+(O app aberto e usado de verdade, com o print do navegador ao lado do mockup, o console sem erro e o fluxo principal clicado ate o fim.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 614.5514173228345953 Td
+(Trafego pago) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 601.5120472440944468 Td
+(Antes de subir, a soma do orcamento diario bate com o combinado, nenhum conjunto passa do teto, todo link tem UTM e o nome segue) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 591.3073228346456744 Td
+(o padrao, tudo conferido na planilha exportada do gerenciador. Subir a campanha fica com voce.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 569.7640157480315111 Td
+(Copywriting) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 556.7246456692914762 Td
+(Cada regra da marca vira um item que passa ou falha, como a primeira linha, o tamanho, a palavra proibida e o CTA, conferidos um por) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 546.5199212598425902 Td
+(um com o trecho que prova.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 524.9766141732284268 Td
+(Relatorio e planilha) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 511.9372440944882783 Td
+(Cada total recalculado a partir da base original e cada numero do texto achado na planilha, com a celula de onde ele saiu.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 490.3939370078741149 Td
+(QA) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 477.3545669291339664 Td
+(Os passos do roteiro de teste executados na ordem, com o print de cada um e o resultado esperado ao lado do que apareceu.) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0.118 g
+56.6929133858267775 454.3939370078741717 Td
+(O que o conferidor de video confere e como) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 434.5514173228347659 Td
+(Cada checagem do conferir_video.py, com o filtro do ffmpeg que mede e o limite que reprova, rodado em 7 de novembro) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 421.7955118110237436 Td
+(de 2026 no ffmpeg 9.0.2.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 397.7010236220473871 Td
+(Formato) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 384.6616535433072386 Td
+(Largura, altura, quadros por segundo e se tem audio. Reprova quando o tamanho nao e o do --formato e avisa quando a proporcao nao) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 374.4569291338584094 Td
+(e 9:16.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 352.913622047244246 Td
+(Comeco da fala) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 339.8742519685041543 Td
+(O silencio abaixo de -35 dB no comeco, que reprova quando a fala so comeca depois de 0,5 s.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 318.3309448818899909 Td
+(Pausas no meio) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 305.2915748031498424 Td
+(Todo silencio maior que o --pausa, de 0,6 s por padrao, vira uma linha com o segundo em que acontece: e o espaco demais de um lado.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 283.748267716535679 Td
+(Fim) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 270.7088976377955305 Td
+(Reprova quando sobra mais de 1,2 s de silencio depois da ultima fala e avisa quando o audio acaba colado nela, que e quando a ultima) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 260.5041732283467582 Td
+(palavra pode ter sido cortada.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 238.9608661417325948 Td
+(Tela preta) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 225.9214960629924462 Td
+(Qualquer trecho preto de 0,1 s ou mais fora do comeco e do fim reprova.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 204.3781889763782829 Td
+(Imagem parada) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 191.3388188976381343 Td
+(Avisa quando a imagem fica igual por 2 s ou mais, sem reprovar, porque uma cartela parada pode ser de proposito.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 169.7955118110239709 Td
+(Volume) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 156.7561417322838224 Td
+(O volume integrado em LUFS e o pico, com aviso fora da faixa de -16 a -12 LUFS ou com pico acima de -1 dBFS.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 135.212834645669659 Td
+(Cortes) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 122.1734645669295105 Td
+(Cada troca brusca de imagem vira um corte_NN.jpg com o quadro de 0,2 s antes e o de 0,2 s depois, pro Claude ver se cortou no lugar) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 111.9687401574807382 Td
+(certo.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 90.4254330708664611 Td
+(Roteiro contra o que se ouve) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 77.3860629921261989 Td
+(Compara palavra por palavra o roteiro.txt com a transcricao do render e lista o que trocou, o que faltou e o que sobrou.) Tj
+ET
+endstream
+endobj
+17 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 18 0 R
+>>
+endobj
+18 0 obj
+<<
+/Length 8023
+>>
+stream
+0.5670000000000001 w
+0.91 0.39 0.04 RG
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 785.1970866141732586 Td
+(Sonda) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 772.1577165354329964 Td
+(Planta 1,5 s de tela preta e silencio numa copia de 10 s e confere se a conferencia pega. Se nao pegar, reprova tudo.) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0.118 g
+56.6929133858267775 749.1970866141732586 Td
+(O que o criador do Claude Code diz sobre verificacao, com a fonte) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 729.3545669291338527 Td
+(As frases do Boris Cherny, que criou e chefia o Claude Code, no lugar e na data em que foram ditas. Traducao nossa,) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 716.5986614173227736 Td
+(com o original na nota.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 692.5041732283464171 Td
+(1. A dica mais importante) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 679.4648031496062686 Td
+(Provavelmente o mais importante pra ter otimos resultados no Claude Code e dar a ele um jeito de verificar o proprio trabalho: com esse) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 669.2600787401574962 Td
+(loop de retorno, a qualidade do resultado final fica 2 a 3 vezes maior. Ele completa que a verificacao muda em cada area, de um) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 659.0553543307086102 Td
+(comando no terminal ou uma bateria de testes ao app testado no navegador ou no simulador do celular.  Atencao: Original: give Claude) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 648.8506299212598378 Td
+(a way to verify its work. If Claude has that feedback loop, it will 2-3x the quality of the final result. ) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 638.6459055118109518 Td
+(https://x.com/bcherny/status/2007179861115511237) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 617.1025984251969021 Td
+(2. Tarefa muito longa) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 604.0632283464567536 Td
+(Em tarefa muito longa, ele pede pro Claude verificar o trabalho com um agente em segundo plano no fim, usa um Stop hook de agente) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 593.8585039370079812 Td
+(pra fazer isso de um jeito mais garantido ou usa o plugin do Ralph, que hoje esta no marketplace oficial como ralph-loop.  Atencao:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 583.6537795275590952 Td
+(Original: prompt Claude to verify its work with a background agent when it's done, use an agent Stop hook to do that more) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 573.4490551181103228 Td
+(deterministically, or use the ralph-wiggum plugin.  https://x.com/bcherny/status/2007179858435281082) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 551.9057480314961595 Td
+(3. Falar com um loop) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 538.8663779527560109 Td
+(O salto de agora, segundo ele, e nao falar mais com um agente: ele fala com um loop ou com uma rotina, e ela faz os prompts pro) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 528.6616535433072386 Td
+(Claude por ele. A frase esta em Reflecting on a year of Claude Code, a conversa dele com a Cat Wu no canal do Claude.  Atencao:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 518.4569291338584662 Td
+(Original: I don't talk to an agent anymore. I talk to loop or I talk to a routine and it prompts Claude for me. ) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 508.2522047244095802 Td
+(https://www.youtube.com/watch?v=Hth_tLaC2j8&t=653s) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 486.7088976377954168 Td
+(4. O que mais gente erra) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 473.6695275590552683 Td
+(Na conversa da Y Combinator, ele diz que a habilidade agora e dar uma tarefa um pouco dificil demais e um jeito do Claude verificar o) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 463.4648031496064959 Td
+(proprio trabalho. O exemplo dele e reescrever o app de desktop do Claude comparando print pixel por pixel, numa tarefa que rodava) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 453.2600787401576667 Td
+(havia mais de 2 semanas.  https://www.youtube.com/watch?v=qyPCVqFUyDo&t=1172s) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0.118 g
+56.6929133858267775 430.2994488188978721 Td
+(Os comandos e arquivos do loop) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 410.4569291338584662 Td
+(Todos existem no Claude Code 2.1.319, de 6 de novembro de 2026.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 386.3624409448821098 Td
+(/goal) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 373.3230708661419612 Td
+(Poe a condicao de pronto com o juiz separado. O /goal sozinho mostra o andamento e o /goal clear tira a meta.  INSTALL: /goal o) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 363.118346456693132 Td
+(relatorio termina em APROVADO, ou pare depois de 8 voltas) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 341.5750393700789687 Td
+(/verify) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 328.535669291338877 Td
+(Compila, roda e usa o app pra confirmar a mudanca, e grava a receita em .claude/skills/verify/SKILL.md.  INSTALL: /verify) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 306.9923622047247136 Td
+(/run-skill-generator) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 293.9529921259845651 Td
+(Sobe o projeto do zero e grava como, pro /run, o /verify e qualquer agente seguirem a mesma receita.  INSTALL: /run-skill-generator) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 272.4096850393704017 Td
+(/code-review) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 259.3703149606302532 Td
+(Revisa as mudancas da branch atras de bug, em qualquer plano. O /review e o mesmo comando.  INSTALL: /code-review) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 237.8270078740160898 Td
+(/hooks) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 224.7876377952759412 Td
+(Mostra os hooks que carregaram, os do projeto e os seus.  INSTALL: /hooks) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 203.2443307086617779 Td
+(claude --chrome) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 190.2049606299216293 Td
+(Abre a sessao ligada ao seu navegador, pro Claude testar a pagina, ler o console e tirar print.  INSTALL: claude --chrome) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 168.661653543307466 Td
+(/loop) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 155.6222834645673174 Td
+(Repete o prompt no intervalo enquanto a sessao esta aberta, e sem intervalo o Claude escolhe o ritmo.  INSTALL: /loop 15m confira o) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 145.4175590551185451 Td
+(CI e conserte o que quebrou) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 123.8742519685043817 Td
+(claude -p) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 110.8348818897642332 Td
+(Roda um pedido sem abrir a conversa, que e como o loop entra em script, em CI e em lote.  INSTALL: claude -p "/goal o teste passa") Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 100.6301574803153471 Td
+(--max-turns 30) Tj
+ET
+endstream
+endobj
+19 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 20 0 R
+>>
+endobj
+20 0 obj
+<<
+/Length 8572
+>>
+stream
+0.5670000000000001 w
+0.91 0.39 0.04 RG
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 785.1970866141732586 Td
+(.claude/settings.json) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 772.1577165354329964 Td
+(Onde mora o Stop hook do projeto, que vale pra todo mundo que abrir a pasta depois de confiar nela.) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0.118 g
+56.6929133858267775 749.1970866141732586 Td
+(10 prompts pra fechar o loop) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 729.3545669291338527 Td
+(O 1 serve pra qualquer tarefa, do 2 ao 4 sao da edicao de video, o 5 e o 6 gravam e revisam a conferencia, do 7 ao 9) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 716.5986614173227736 Td
+(sao pra copy, trafego pago e site, e o 10 faz a conferencia aprender com o erro que passou. Troque o que esta entre) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 703.8427559055118081 Td
+(colchetes.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 679.748267716535338 Td
+(1. 1. O pedido com prova) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 666.7088976377951894 Td
+(Objetivo: [o que tem que estar pronto, ex.: o formulario de cadastro valida o e-mail e mostra o erro em portugues].) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 646.2994488188976447 Td
+(Como provar que esta pronto:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 636.0947244094487587 Td
+(1. [ex.: npm test sai com 0 e o teste novo do formulario passa]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 625.8899999999999864 Td
+(2. [ex.: voce sobe o app, preenche um e-mail invalido e me mostra o print da mensagem]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 605.480551181102328 Td
+(Restricoes: [ex.: nao mexa no banco e nao instale biblioteca nova].) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 585.0711023622047833 Td
+(Rode a checagem no fim e continue ate ela passar. Quando terminar, me mostre o comando que rodou e a saida, ou o print. Se travar) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 574.8663779527560109 Td
+(no mesmo ponto 3 vezes, pare e me explique o que tentou.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 553.3230708661417339 Td
+(2. 2. A edicao de video que se confere) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 540.283700787401699 Td
+(Edite [arquivo do bruto] seguindo o roteiro em roteiro.txt e renderize em render/final.mp4, em 1080x1920.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 519.8742519685040406 Td
+(Depois de cada render:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 509.6695275590552683 Td
+(1. Transcreva o render em ouvido.txt com [a ferramenta de transcricao que voce usa]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 499.4648031496064391 Td
+(2. Rode python3 conferir_video.py render/final.mp4 --formato 1080x1920 --roteiro roteiro.txt --ouvido ouvido.txt) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 489.2600787401576667 Td
+(3. Abra cada conferencia/folha_*.jpg e cada conferencia/corte_*.jpg e descreva o que viu em cada imagem) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 479.0553543307088376 Td
+(4. Conserte tudo que o relatorio e as imagens mostraram e renderize de novo) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 458.645905511811236 Td
+(So diga que terminou quando o relatorio terminar em APROVADO e voce tiver descrito todas as imagens. No fim, me mostre o) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 448.4411811023624637 Td
+(RELATORIO.md e a lista do que consertou.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 426.8978740157483003 Td
+(3. 3. A meta da edicao com /goal) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 413.8585039370081518 Td
+(/goal o RELATORIO.md do render mais novo em render/ termina em APROVADO e aparece colado na conversa, e voce descreveu) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 403.6537795275593226 Td
+(cada folha e cada corte da pasta conferencia, sem mexer no roteiro.txt, ou pare depois de 8 voltas) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 382.1104724409451592 Td
+(4. 4. Olhar as folhas de quadros) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 369.0711023622050106 Td
+(Abra todas as imagens da pasta conferencia: as folha_*.jpg tem 12 quadros cada, 1 a cada 2 segundos, da esquerda pra direita e de) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 358.8663779527562383 Td
+(cima pra baixo, e as corte_*.jpg mostram 0,2 s antes e 0,2 s depois de cada corte.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 338.4569291338586368 Td
+(Para cada imagem, me diga:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 328.2522047244098076 Td
+(1. Se a legenda ou algum texto cobre o rosto, a boca ou os olhos) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 318.0474803149610352 Td
+(2. Se algum texto esta cortado na borda ou perto demais do topo e da base, onde a interface do Instagram cobre) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 307.8427559055122629 Td
+(3. Se o corte caiu no meio de um gesto ou com a boca aberta no meio de uma palavra) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 297.6380314960633768 Td
+(4. Se alguma animacao aparece por cima de outra ou deixa o texto ilegivel) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 287.4333070866146045 Td
+(5. Se a cor ou o enquadramento muda de um quadro pro outro sem motivo) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 267.0238582677169461 Td
+(Monte uma tabela com a imagem, o segundo aproximado, o problema e o conserto. Se a imagem estiver certa, escreva ok.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 245.4805511811027827 Td
+(5. 5. A skill de conferencia do projeto) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 232.4411811023627479 Td
+(Crie a skill .claude/skills/conferir-entrega/SKILL.md deste projeto, em portugues do Brasil, com no maximo 60 linhas:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 212.0317322834650895 Td
+(1. No frontmatter, name conferir-entrega e uma description que diga pra usar antes de dizer que qualquer entrega terminou) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 201.8270078740163171 Td
+(2. Os comandos exatos de conferencia deste projeto, na ordem, cada um com o que conta como passou) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 191.6222834645674311 Td
+(3. O que abrir e olhar alem dos comandos: prints, folhas de quadros, a pagina no navegador) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 181.4175590551186588 Td
+(4. O formato da prova que voce me mostra no fim: comando, saida e veredito) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 171.2128346456698864 Td
+(5. Uma secao de armadilhas, com os erros que ja passaram sem ser pegos) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 150.803385826772228 Td
+(Depois rode a skill uma vez agora, de verdade, e me mostre o resultado.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 129.2600787401580646 Td
+(6. 6. A revisao contra a especificacao) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 116.2207086614179161 Td
+(Use um subagente pra revisar o que foi feito contra o SPEC.md. Confira se cada requisito foi implementado e se os casos de borda) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 106.0159842519691438 Td
+(listados tem teste. Relate so as falhas que afetam o funcionamento e ignore estilo.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 84.4726771653548667 Td
+(7. 7. A regua da copy) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 71.4333070866147182 Td
+(Antes de me entregar o texto, confira cada regra abaixo e monte uma tabela com a regra, passou ou falhou e o trecho que prova:) Tj
+ET
+endstream
+endobj
+21 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 22 0 R
+>>
+endobj
+22 0 obj
+<<
+/Length 8250
+>>
+stream
+0.5670000000000001 w
+0.91 0.39 0.04 RG
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 774.9923622047243725 Td
+(1. A primeira linha e uma promessa ou um numero) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 764.7876377952756002 Td
+(2. Tem no maximo [N] caracteres) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 754.5829133858267141 Td
+(3. Nenhuma destas palavras aparece: [palavras proibidas da marca]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 744.3781889763779418 Td
+(4. O CTA pede [a acao, ex.: comentar o codigo da legenda]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 734.1734645669290558 Td
+(5. Todo numero tem a fonte em [onde a fonte fica]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 723.9687401574802834 Td
+(6. [outra regra da sua marca]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 703.559291338582625 Td
+(Se alguma falhar, reescreva e confira de novo. So me entregue quando todas passarem, com a tabela no fim.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 682.0159842519684616 Td
+(8. 8. A campanha conferida antes de subir) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 668.9766141732283131 Td
+(Abaixo esta a planilha exportada do gerenciador de anuncios com a campanha montada. Antes de eu subir, confira:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 648.5671653543306547 Td
+(1. A soma do orcamento diario de todos os conjuntos e R$ [valor combinado]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 638.3624409448818824 Td
+(2. Nenhum conjunto passa de R$ [teto por conjunto]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 628.15771653543311 Td
+(3. Todo link de destino tem utm_source, utm_medium e utm_campaign) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 617.952992125984224 Td
+(4. O nome de cada campanha, conjunto e anuncio segue o padrao [padrao de nome]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 607.7482677165354517 Td
+(5. O publico e a regiao de cada conjunto sao [o combinado]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 587.3388188976377933 Td
+(Monte uma tabela com cada item, passou ou falhou e a linha da planilha. Nao suba nada, a publicacao fica comigo.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 566.9293700787402486 Td
+(PLANILHA:) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 556.7246456692914762 Td
+([cole aqui]) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 535.1813385826771992 Td
+(9. 9. A landing page conferida no navegador) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 522.1419685039370506 Td
+(Abra [endereco local da pagina, ex.: localhost:3000] no Chrome em 390 px e em 1440 px de largura.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 501.7325196850395059 Td
+(1. Tire print das 2 larguras e compare com o mockup em [arquivo do mockup]) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 491.5277952755907336 Td
+(2. Confira se o console esta sem erro e se nenhum pedido de rede falhou) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 481.3230708661419044 Td
+(3. Clique no botao principal e preencha o formulario com dados de teste ate a tela de obrigado) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 471.1183464566930752 Td
+(4. Liste cada diferenca com o mockup e cada erro, conserte e confira de novo) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 450.7088976377954737 Td
+(So diga que terminou quando as 2 larguras baterem com o mockup e o fluxo chegar ate o fim, e me mostre os prints finais.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 429.1655905511813103 Td
+(10. 10. O erro que passou vira checagem nova) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 416.1262204724411617 Td
+(Eu achei este erro na entrega e a conferencia deixou passar: [descreva o erro, ex.: a legenda cobriu o rosto entre 12 e 14 segundos].) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 395.7167716535435602 Td
+(1. Explique em 1 frase por que a conferencia nao pegou) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 385.512047244094731 Td
+(2. Acrescente uma checagem nova que pegue esse tipo de erro, no script ou na skill de conferencia) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 375.3073228346459587 Td
+(3. Plante esse mesmo erro numa copia de teste e mostre que agora a conferencia reprova) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 365.1025984251971295 Td
+(4. Rode de novo na entrega boa e mostre que ela continua aprovada) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.118 g
+56.6929133858267775 354.8978740157483571 Td
+(5. Registre a regra nova no CLAUDE.md, na secao Como provar que ficou pronto) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0.118 g
+56.6929133858267775 331.9372440944885057 Td
+(Antes de deixar o Claude trabalhar sem voce) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 312.0947244094490998 Td
+(As 7 conferencias, da checagem ao aprovado final.) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 292.2522047244098076 Td
+(Existe uma checagem que volta passou ou falhou, e o comando dela esta no CLAUDE.md  |  A checagem reprovou um) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 279.4962992125987284 Td
+(erro plantado de proposito antes de voce confiar nela  |  O Claude mostra a prova no fim: o comando, a saida, o relatorio) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 266.740393700787763 Td
+(ou o print  |  Tem limite: o numero de voltas na condicao do /goal, o --max-turns ou o teto do Stop hook  |  Alguem que) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 253.9844881889766839 Td
+(nao fez o trabalho revisou, seja o /code-review, o subagente revisor ou uma segunda sessao  |  O que nao volta atras,) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 241.2285826771657185 Td
+(como publicar, subir campanha, agendar post ou fazer deploy, passa por uma pessoa  |  Cada erro que voce achou na) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 228.4726771653546393 Td
+(mao virou uma checagem nova) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0.118 g
+56.6929133858267775 202.9608661417325948 Td
+(Funciona no Brasil?) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 183.1183464566931889 Td
+(Funciona no Brasil do mesmo jeito: o Claude Code entende e responde em portugues, e o /goal, o Stop hook, o /verify, o) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 170.3624409448822234 Td
+(Superpowers, o ffmpeg e o conferidor desta pagina sao gratis. O unico custo e o Claude Code, que vem a partir do) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 157.6065354330711443 Td
+(Claude Pro, R$ 110 por mes ou R$ 92 no anual, cobrado em real, e as frases do Boris estao em ingles, no X e no) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 144.8506299212601789 Td
+(YouTube, que gera a legenda em portugues nas configuracoes do video.) Tj
+ET
+BT
+/F2 13 Tf
+14.9499999999999993 TL
+0.118 g
+56.6929133858267775 119.3388188976381343 Td
+(Links) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 99.4962992125987284 Td
+(A dica 13 do Boris Cherny: https://x.com/bcherny/status/2007179861115511237  |  Boas praticas do Claude Code:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 86.7403937007876493 Td
+(https://code.claude.com/docs/en/best-practices  |  O /goal: https://code.claude.com/docs/en/goal  |  Guia de hooks:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 73.9844881889766839 Td
+(https://code.claude.com/docs/en/hooks-guide  |  Referencia de hooks: https://code.claude.com/docs/en/hooks  |  Skills do) Tj
+ET
+endstream
+endobj
+23 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 24 0 R
+>>
+endobj
+24 0 obj
+<<
+/Length 1738
+>>
+stream
+0.5670000000000001 w
+0.91 0.39 0.04 RG
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 785.1970866141732586 Td
+(Claude Code: https://code.claude.com/docs/en/skills  |  O Claude no Chrome: https://code.claude.com/docs/en/chrome  | ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 772.4411811023621794 Td
+(Superpowers: https://github.com/obra/superpowers  |  Reflecting on a year of Claude Code:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 759.6852755905511003 Td
+(https://www.youtube.com/watch?v=Hth_tLaC2j8  |  O ffmpeg no Mac: https://formulae.brew.sh/formula/ffmpeg) Tj
+ET
+0.91 0.39 0.04 RG
+56.6929133858267775 734.1734645669290558 m
+538.5870866141731312 734.1734645669290558 l
+S
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.91 0.388 0.039 rg
+56.6929133858267775 711.4962992125983874 Td
+(Dica do Fabiano) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 694.4884251968503577 Td
+(Comeca pelo trabalho que voce mais corrige na mao, porque e ali que o loop se paga primeiro: escreve a checagem que) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 681.7325196850392786 Td
+(volta passou ou falhou, planta um erro de proposito pra ver se ela pega e so depois deixa o Claude rodar sozinho. E todo) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 668.9766141732283131 Td
+(erro que escapar e voce achar no olho vira uma checagem nova, assim a conferencia fica mais esperta a cada entrega e) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.118 g
+56.6929133858267775 656.2207086614173477 Td
+(voce sai do papel de gargalo.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 g
+56.6929133858267775 626.4569291338582389 Td
+(fabiano.app) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R ]
+/Count 11
+>>
+endobj
+25 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+26 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+27 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+28 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+29 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+30 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+31 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+32 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+33 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+34 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+35 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+36 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+37 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+38 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 25 0 R
+/F2 26 0 R
+/F3 27 0 R
+/F4 28 0 R
+/F5 29 0 R
+/F6 30 0 R
+/F7 31 0 R
+/F8 32 0 R
+/F9 33 0 R
+/F10 34 0 R
+/F11 35 0 R
+/F12 36 0 R
+/F13 37 0 R
+/F14 38 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+39 0 obj
+<<
+/Producer (jsPDF 4.2.1)
+/CreationDate (D:20261110112441-00'00')
+>>
+endobj
+40 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 41
+0000000000 65535 f 
+0000096743 00000 n 
+0000098633 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000010113 00000 n 
+0000010250 00000 n 
+0000021305 00000 n 
+0000021442 00000 n 
+0000031106 00000 n 
+0000031244 00000 n 
+0000041976 00000 n 
+0000042115 00000 n 
+0000052360 00000 n 
+0000052499 00000 n 
+0000061966 00000 n 
+0000062105 00000 n 
+0000069392 00000 n 
+0000069531 00000 n 
+0000077607 00000 n 
+0000077746 00000 n 
+0000086371 00000 n 
+0000086510 00000 n 
+0000094813 00000 n 
+0000094952 00000 n 
+0000096868 00000 n 
+0000096994 00000 n 
+0000097125 00000 n 
+0000097259 00000 n 
+0000097397 00000 n 
+0000097521 00000 n 
+0000097650 00000 n 
+0000097782 00000 n 
+0000097918 00000 n 
+0000098046 00000 n 
+0000098173 00000 n 
+0000098302 00000 n 
+0000098435 00000 n 
+0000098537 00000 n 
+0000098886 00000 n 
+0000098972 00000 n 
+trailer
+<<
+/Size 41
+/Root 40 0 R
+/Info 39 0 R
+/ID [ <DCA11B14EBDAE946AEC8FEA00BCDAB5F> <DCA11B14EBDAE946AEC8FEA00BCDAB5F> ]
+>>
+startxref
+99076
+%%EOF
