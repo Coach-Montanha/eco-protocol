@@ -85,11 +85,14 @@ Fundido diretamente no `@eco` a partir da metodologia de Boris Cherny (criador d
 
 ---
 
-## 8. Arquitetura e Otimização de Esquemas
+## 8. Engenharia de Contexto, Cartografia & Planejamento Atômico (`gsd-core` + `ralph-loop` + `code-floorplan` + `vibe-coding-toolkit` + `mcptoon` + `graphify`)
 
-- **Graphify**: Inspecionar grafos de dependências e importações antes de refatorações de código.
+- **GSD-Core & Memory Bank (`vibe-coding-toolkit`)**: Planejamento modular Spec-Driven (Discuss, Plan, Execute, Verify) com fatias atômicas de 2 a 5 minutos. Descarrega o estado da memória para arquivos leves no disco (`PROJECT.md`, `STATE.md`, `ROADMAP.md`), prevenindo a degradação de contexto (*Zero Context Decay*).
+- **Ralph-Loop (Iteração Autônoma Persistente)**: Loop contínuo de auto-correção orientado pelo sistema de arquivos, iterando até alcançar 100% dos testes passando (`exit 0`) sem desperdiçar rodadas de prompts do usuário.
+- **Code-Floorplan**: Mapeamento visual em 4 camadas estruturais (Setores, Motores, Persistência, Pontes) para substituir leituras integrais de arquivos por plantas baixas cirúrgicas.
+- **mcptoon**: Compressão dinâmica de esquemas MCP em até 99% para blindar o orçamento de contexto.
+- **Graphify**: Inspecionar grafos de dependências e importações AST antes de refatorações de código.
 - **MicroKit & Bencho UI**: Microinterações modernas e leves em TSX/CSS nativo, fluidez de 60 FPS, sem bibliotecas pesadas de terceiros.
-- **mcptoon**: Compressão sob demanda de esquemas MCP para preservar o orçamento de contexto.
 
 ---
 

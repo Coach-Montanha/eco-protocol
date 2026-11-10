@@ -52,11 +52,13 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
    - **Imunização Contínua**: Todo erro que escapar para o olho humano vira imediatamente uma nova regra e checagem automatizada na seção "Como provar que ficou pronto" do `CLAUDE.md`.
    - **Human-in-the-Loop nos Pontos Sem Volta**: Deploys de produção, subida de campanhas de tráfego, disparo de mensagens e exclusões exigem portão de aprovação humana.
 
-8. **mcptoon, Auto-Ontology, Graphify & MicroKit/Bencho UI**:
-   - mcptoon: Compactação dinâmica de esquemas MCP e limpeza de contexto para retenção de memória de trabalho.
-   - Auto-Ontology: Construção automatizada de ontologias semânticas e grafos de conhecimento determinísticos (nós e arestas) sobre o cofre Obsidian e código sem alucinações.
-   - Graphify: Inspeção de grafos de relacionamento antes de refatorações de código.
-   - MicroKit/Bencho UI: Interfaces modernas em TSX/CSS nativo a 60 FPS sem bibliotecas pesadas.
+8. **Engenharia de Contexto, Cartografia & Planejamento Atômico (/gsd-core, /ralph-loop, /code-floorplan, /vibe-coding-toolkit, /mcptoon, /graphify)**:
+   - **GSD-Core & Vibe-Coding (Memory Bank)**: Planejamento modular Spec-Driven (Discuss, Plan, Execute, Verify) em fatias atômicas de 2 a 5 minutos. Descarrega a memória de trabalho do chat para arquivos leves em disco (`PROJECT.md`, `STATE.md`, `ROADMAP.md`), garantindo *Zero Context Decay*.
+   - **Ralph-Loop (Iteração Autônoma Persistente)**: Execução autônoma contínua orientada pelo sistema de arquivos até que todos os testes passem (`exit 0`), eliminando prompts manuais intermediários e idas e vindas de contexto.
+   - **Code-Floorplan**: Mapeamento cartográfico em 4 camadas (Setores, Motores, Persistência, Pontes) que audita a arquitetura e substitui a leitura cega de arquivos inteiros por uma planta baixa estrutural cirúrgica.
+   - **mcptoon**: Compactação dinâmica de esquemas MCP em até 99%, liberando o orçamento de contexto para raciocínio útil.
+   - **Graphify**: Inspeção de grafos de relacionamento AST antes de refatorações de código.
+   - **Auto-Ontology & MicroKit**: Construção de ontologias semânticas sem alucinação e interfaces leves a 60 FPS.
 
 9. **Blindagem de Produção, Resiliência & Anti-SaaS (/vibe-production-checklist, /matriz-anti-saas, /pocketbase)**:
    - Toda API, rota, script ou serviço deve nascer pronto para produção: idempotência em operações mutáveis, rate limiting defensivo, timeout em conexões de rede e índices obrigatórios em consultas SQLite/PocketBase.
