@@ -16,6 +16,7 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
      - Análise em lote de URLs externas, digestão volumosa de páginas web e processamento analítico exaustivo são terceirizados automaticamente para blindar tokens locais do Antigravity.
      - **Prioridade 1**: Groq (`llama-3.3-70b-versatile`) para inferência instantânea (< 1s) sem gastar tokens de raciocínio locais.
      - **Fallback Automático**: Gemini 2.5 Flash API para janelas massivas ou em caso de contingência do Groq.
+     - **Braço Operacional de Código Pesado (Freebuff Engine)**: Acionado de forma autônoma e condicional em cenários de refatoração massiva, scaffolding extenso ou análises em lote de código puro. Roda sob blindagem estrita (Regra RLAUR: zero envio de chaves, senhas ou dados confidenciais de alunos/clientes) e todo código gerado passa obrigatoriamente pela validação local do `gatekeeper` e `unslop` antes de ser aceito.
 
 2. **Ingestão Zero-Tokens de Mídia & Documentos (`anydoc` / `pdfcraft` / `defuddle`)**:
    - Proibido gastar tokens de visão ou OCR em arquivos PDF, DOCX, XLSX ou páginas web.
@@ -77,25 +78,30 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
 # Hubs Mestres Consolidados do Ecossistema
 
 ### 1. 🎬 /insta (ou @insta) — Hub Mestre Audiovisual, Vídeo & Editorial
-Unifica `/video-studio`, `video-edit`, `video-understand`, `pixelle-video`, `cobalt`, `producao-video-hypit`, `earshot-audio`, `motion-skills`, `rhubarb-lip-sync`, `assistir-video-ia`, `website-to-video` e `brag`:
+Unifica `/video-studio`, `video-edit`, `video-understand`, `pixelle-video`, `cobalt`, `producao-video-hypit`, `earshot-audio`, `motion-skills`, `motionmaxxing`, `kokon-photo`, `rhubarb-lip-sync`, `assistir-video-ia`, `website-to-video`, `brag` e **`montanha-video-studio`**:
+- **Montanha Video Studio Portable Engine (`C:\Users\Administrator\Documents\Projetos\Montanha Video Studio\cli_runner.py`)**:
+  - Renderizador local headless portátil acionado por baixo dos panos em qualquer conversa:
+    `python "C:\Users\Administrator\Documents\Projetos\Montanha Video Studio\cli_runner.py" --text "<roteiro>" --title "<nome>" --format 9:16`
+  - Integração nativa com **SoundCraft** (masterização de áudio 24-bit 48kHz), `edge-tts` (Antônio/Francisca Neural), legendas dinâmicas `.ass` (Hormozi) e FFmpeg local.
 - **Dual Real Video Engine (9:16 — 1080x1920)**:
   - **Opção A - Vídeo Neural**: `gemini-omni-1.1-flash` para animar fotos do artigo ou gerar cenas 3D por prompt (10s a 40s em 4K).
   - **Opção B - Vídeo B-Roll Narrado**: Pipeline local FFmpeg, narração neural brasileira, clipes reais via cobalt, legendas dinâmicas animadas (.ass) e SFX.
+  - **Opção C - Motion Determinístico (`motionmaxxing`)**: HTML/CSS/GSAP/Three.js em runtime seek-safe com quality gates G0-G5 para demos e lançamentos.
 - **Instagram Editorial Package**: Carrossel 1:1, legendas de alta conversão, roteiro de stories interativos e copy multiplataforma.
 - **Modificadores de Estúdio**: `/gymNewBg`, `/3pointsLighting`, `/removePeopleBg`, `/volumetricLighting`, `/cinematicBokehLighting`, `/editorial`.
 
 ### 2. 🧬 /replica — Hub Mestre de Engenharia Reversa & Reconstrução Clean-Room
-Unifica o pacote `replica-*`, `engenhariareversa` (deep, visual, full), `apktool-modifier`, `rea`, `clonar-interface-mimic` e `screenshot-to-code`:
-- Reconhecimento automático do alvo (binário, APK, site ou print).
+Unifica o pacote `replica-*`, `engenhariareversa` (deep, visual, full), `apktool-modifier`, `projetor-hy320-otimizador`, `reverse-api-recorder`, `rea`, `clonar-interface-mimic` e `screenshot-to-code`:
+- Reconhecimento automático do alvo (binário, APK, hardware/box, site ou print).
 - Ciclo clean-room em 5 fases: Recon ➔ Modelagem SQL/Hono ➔ Rebranding/Tokens ➔ Build cirúrgico ➔ Diff estrutural e testes de paridade.
 
 ### 3. ✨ /impeccable — Hub Mestre de Craftsmanship Frontend & UI/UX
-Unifica `impeccable`, `ui-ux-pro-max`, `apple-design`, `apple-bento-grid`, `mobile-app-ui-design`, `emil-design-eng`, `taste-skill`, `web-design-guidelines`, `front-end-checklist`, `react-bits`, `steacode-ui`, `mobile-ux-engine` e `ux-laws-design`:
-- Eliminação total de estética genérica de IA (anti-slop); 80 estilos visuais, 192 paletas calibradas (regra 60-30-10) e microinterações 60 FPS com curvas spring.
+Unifica `impeccable`, `stageshow` (Benji Taylor), `unslop` (Damir Sokolovsky), `astryx` (Meta Kit), `ui-ux-pro-max`, `apple-design`, `apple-bento-grid`, `mobile-app-ui-design`, `emil-design-eng`, `modern-web-guidance`, `taste-skill`, `web-design-guidelines`, `front-end-checklist`, `react-bits`, `steacode-ui`, `mobile-ux-engine` e `ux-laws-design`:
+- Eliminação total de estética genérica de IA (anti-slop); auditoria em 9 passes do unslop, 80 estilos visuais, 192 paletas calibradas (regra 60-30-10) e microinterações 60 FPS com curvas spring.
 - Regra mobile inegociável: `<input>` com fonte mínima de 16px (evita auto-zoom no iOS Safari) e botões $\ge 44\times 44$px (ou $\ge 56$px para interfaces ativas de treino/fitness).
 
 ### 4. 🏋️ @montanha-coach — Hub Mestre de Fisiologia, Treino & Nutrição
-Unifica `lpo-crosstraining` (Everett LPO), `opex-coaching-system` (OPEX BMR/TDEE), `brad-pilon-fasting` (Eat Stop Eat), `lyle-mcdonald-nutrition` (PSMF & Stubborn Fat Protocol), `playbook-prompts-personal-trainer` e `personal-trainer-prompts`:
+Unifica `lpo-crosstraining` (Everett LPO), `opex-coaching-system` (OPEX BMR/TDEE), `brad-pilon-fasting` (Eat Stop Eat), `lyle-mcdonald-nutrition` (PSMF & Stubborn Fat Protocol), `receitas-academia-montanha` (Diversificação de Receitas Fitness), `playbook-prompts-personal-trainer` e `personal-trainer-prompts`:
 - Prescrição científica direta, recomposição corporal, mobilização de gordura teimosa e atendimento humanizado anti-churn de alunos no tom inegociável da skill `minha-voz`.
 
 ---

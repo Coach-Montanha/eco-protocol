@@ -23,6 +23,9 @@ Aplicado para código local, leitura e edição de arquivos, comandos no termina
 Aplicado automaticamente para tarefas pesadas da web (varredura de múltiplos URLs, digestão analítica em lote, pesquisas exaustivas) ou consultas volumosas:
 - **Prioridade 1 — Groq (`llama-3.3-70b-versatile`)**: Respostas instantâneas (< 1s) sem gastar tokens locais de raciocínio (Zero CoT) no Antigravity.
 - **Fallback Automático — Gemini 2.5 Flash API**: Acionado se a janela de contexto exceder o limite do Groq ou houver rate limit.
+- **Braço Operacional de Código Pesado (Freebuff Engine)**: Acionado de forma condicional para tarefas de refatoração massiva de código e geração de scaffolds volumosos a custo zero de tokens.
+  - *Blindagem de Segurança RLAUR*: Sanitização prévia obrigatória — jamais expor segredos, `.env`, chaves de API, credenciais ou dados pessoais de clientes/alunos.
+  - *Quality Gate Local*: Todo retorno é auditado localmente por `gatekeeper` (segurança) e `unslop` (anti-slop de UI) antes da persistência.
 - **Diretriz de Retorno**: Formato bruto, cirúrgico e direto (JSON ou Markdown limpo), sem saudações, cortesias ou preâmbulos.
 
 ---
