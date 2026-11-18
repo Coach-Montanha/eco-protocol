@@ -140,7 +140,15 @@ O protocolo `/eco` atua como **meta-orquestrador autônomo** para todas as 140+ 
 
 ---
 
-## 12. Telemetria de Tokens & Relatório de Economia Obrigatório
+## 12. Gatilho de Sincronização Autônoma `/a-obsidian` (Knowledge Sync Nativo)
+
+Sempre que o motor `/eco` estiver ativo ou for disparado, avaliar automaticamente se a tarefa atual gerou novas notas, decisões arquiteturais, especificações, atas, termos ou conceitos que devam ser persistidos no cofre Obsidian (`Obsidian-Cofre-Montanha`):
+- **Disparo Conjunto Automático**: O `/a-obsidian` é acionado de forma coordenada e silenciosa para formatar o Markdown limpo, adicionar wikilinks bidirecionais (`[[...]]`) e atualizar os índices mestres.
+- **Zero Atrito**: O usuário não precisa lembrar de chamar `/a-obsidian` manualmente para registrar resultados importantes de uma sessão de trabalho.
+
+---
+
+## 13. Telemetria de Tokens & Relatório de Economia Obrigatório
 
 Em cumprimento à diretriz global permanente do `@eco`, toda resposta ao usuário deve concluir com a aferição transparente da economia gerada pelo motor:
 - **Gasto Real**: Tokens consumidos na requisição otimizada com `@eco` (execução local, scripts pontuais, mcptoon, qualquer ingestão zero-tokens).

@@ -21,6 +21,12 @@ O `/a-impeccable` (ou `@a-impeccable`) é a garantia inegociável de qualidade v
 1. **Inputs sem Auto-Zoom no iOS**: Todo elemento `<input>`, `<textarea>` e `<select>` DEVE ter fonte mínima de **16px** (evita zoom forçado no Safari Mobile).
 2. **Hit Targets Ergonômicos**: Botões e áreas clicáveis devem ter no mínimo **44x44px** (ou **56x56px** para telas de treino e cronômetros).
 3. **Física Natural de Molas (Springs)**: Microinterações sem curvas lineares duras; uso de amortecimento natural inspirado no HIG da Apple.
+4. **Disciplina Sagrada de Unidades CSS & Viewport Responsivo (Cheat Sheet Anti-Overflow)**:
+   - `rem` → **Tipografia e Font Sizes**: Segue a raiz do navegador (`16px`), garantindo escalabilidade e acessibilidade previsíveis.
+   - `%` e `dvh`/`vh` → **Layouts, Larguras e Alturas Fluidas**: Elementos e capas de mídia devem encolher proporcionalmente ao contêiner (`max-h-[35vh]` / `w-full`), impedindo que imagens rígidas em `px` empurrem controles para fora da tela em celulares compactos.
+   - `px` → **Bordas, Sombras e Divisores**: Exclusivo para detalhes milimétricos estáticos de precisão fixa (`border-1`, `shadow-md`, `rounded-full`).
+   - `vw` e `dvh` → **Seções e Modais Full-Screen**: Uso de `h-[100dvh]` com `pb-[env(safe-area-inset-bottom)]` para nunca ser cortado pelas barras dinâmicas do navegador (Safari/Chrome/Edge) ou pela barra de navegação do sistema operacional.
+   - `em` → **Paddings Proporcionais**: Ideal para botões e badges que devem escalar proporcionalmente ao tamanho do texto interno.
 
 ---
 ## 🔗 Conexões & Skills Relacionadas

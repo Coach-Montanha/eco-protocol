@@ -73,6 +73,10 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
     - Controle direto de janelas, formulários e programas GUI do Windows através de árvore de acessibilidade nativa (UI Automation) e MCP em Rust sem captura contínua de tela por visão computacional.
     - Ponte remota segura via `orca-agent` para despachar ações de desktop e aprovar tarefas pelo celular.
 
+12. **Gatilho de Sincronização Autônoma /a-obsidian (Knowledge Sync Nativo)**:
+    - Sempre que o motor `@eco` for disparado ou estiver ativo, avaliar automaticamente se a tarefa gerou novas notas, decisões arquiteturais, especificações, atas, termos ou conceitos que devam ser persistidos no cofre Obsidian (`Obsidian-Cofre-Montanha`).
+    - Se aplicável, acionar automaticamente o `/a-obsidian` em conjunto para persistir os arquivos em Markdown limpo com wikilinks bidirecionais e manter os índices (`INDICE_MESTRE_SKILLS.md` e `Hubs-Consolidados.md`) perfeitamente atualizados, sem exigir comandos manuais separados.
+
 ---
 
 # Hubs Mestres Consolidados do Ecossistema
@@ -160,13 +164,20 @@ Unifica `lpo-crosstraining` (Everett LPO), `opex-coaching-system` (OPEX BMR/TDEE
      4. `git push`
    - Nunca encerre a tarefa sem realizar o `git push` do repositório modificado.
 
-3. **Telemetria de Tokens & Relatório de Economia Obrigatório (Regra Inegociável)**:
-   - Ao final de **100% das respostas e solicitações**, apresentar obrigatoriamente um resumo conciso com a telemetria do consumo de tokens da interação:
-     - **Gasto Real**: Quantidade estimada de tokens consumidos na solicitação com a automação `@eco` (execução local, scripts cirúrgicos Python/PowerShell, mcptoon, ingestão zero-tokens, etc.).
-     - **Sem Automação**: Quantidade estimada de tokens que teriam sido consumidos no fluxo convencional sem o `@eco` (leitura massiva de arquivos inteiros no contexto, raciocínio CoT verboso, esquemas MCP descompactados, ausência de filtragem cirúrgica).
-     - **Economia Gerada**: Quantidade absoluta de tokens poupados e percentual de redução obtido.
+3. **Skills Utilizadas & Telemetria de Tokens @eco Obrigatórias em 100% das Respostas (Regra Inegociável)**:
+   - Ao final de **100% de todas as interações e respostas**, em qualquer conversa, apresentar obrigatoriamente:
+     1. **🛠️ Skills Utilizadas**: Lista concisa de todas as skills e motores acionados, com um breve resumo de sua atuação na tarefa.
+     2. **📊 Telemetria de Tokens @eco**: Resumo com o consumo otimizado comparado ao modelo convencional:
+        - **Gasto Real**: Quantidade estimada de tokens consumidos na solicitação com a automação `@eco` (execução local, scripts cirúrgicos Python/PowerShell, mcptoon, ingestão zero-tokens, etc.).
+        - **Sem Automação**: Quantidade estimada de tokens que teriam sido consumidos no fluxo convencional sem o `@eco` (leitura massiva de arquivos inteiros no contexto, raciocínio CoT verboso, esquemas MCP descompactados, ausência de filtragem cirúrgica).
+        - **Economia Total**: Quantidade absoluta de tokens poupados e percentual de redução obtido.
    - Formato padronizado obrigatório:
      ```markdown
+     ---
+     🛠️ **Skills Utilizadas**:
+     - `/<nome-da-skill>`: Resumo do que executou.
+     - `/<outra-skill>`: Resumo do que executou.
+
      ---
      📊 **Telemetria de Tokens @eco**:
      - **Gasto Real**: ~X tokens
