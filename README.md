@@ -2,9 +2,9 @@
 
 ![Eco Protocol Banner](assets/eco-banner.png)
 
-O **Eco Protocol** (`@eco`) é um framework de engenharia de contexto e economia computacional para assistentes de IA (Claude Code, Cursor, Antigravity, Open WebUI, ChatGPT). 
+O **Eco Protocol** (`@eco`) é um framework de engenharia de contexto, economia computacional e foco executivo para assistentes de IA (Claude Code, Cursor, Antigravity, Open WebUI, ChatGPT). 
 
-Ele reduz o consumo de tokens em **70% a 85%** através de roteamento dinâmico de modelos, corte determinístico de logs de terminal e disciplina comportamental sênior.
+Ele reduz o consumo de tokens em **70% a 85%** através de roteamento dinâmico de modelos, corte determinístico de logs de terminal, disciplina sênior de engenharia e **princípios cognitivos anti-paralisia (Executive & ADHD Mode)**.
 
 ---
 
@@ -12,7 +12,7 @@ Ele reduz o consumo de tokens em **70% a 85%** através de roteamento dinâmico 
 
 ![Arquitetura Eco Protocol](assets/architecture.svg)
 
-O protocolo opera em duas vias coordenadas:
+O protocolo opera em três vias coordenadas:
 
 1. **Canal Interno (Local)**:
    - **Flash-Lite**: Inspeções de arquivos, buscas cirúrgicas e leituras (~85% de economia).
@@ -25,6 +25,17 @@ O protocolo opera em duas vias coordenadas:
 
 3. **Omni-Trimmer (Next-Action Preservation)**:
    - Script local `scripts/trim_output.py` que intercepta logs de compilação, testes e linters, extraindo apenas status, arquivos afetados e linhas de erro, reduzindo o ruído em até 80%.
+
+---
+
+## 🧠 Pilares Cognitivos Anti-Paralisia (Executive & ADHD Focus)
+
+Inspirado em padrões comprovados de redução de sobrecarga cognitiva (como `ayghri/i-have-adhd`):
+- **Ação na 1ª Linha (*Lead with Action*)**: Respostas começam diretamente com o código, comando ou diagnóstico. Zero preâmbulos vazios ("Com certeza!", "Ótima pergunta!").
+- **Estimativas Concretas em Minutos**: Informa o tempo exato de execuções ou etapas pendentes (`⏱️ ~2 min`), combatendo a cegueira temporal.
+- **Teto Curto de Listas (Cap 3 a 5 passos)**: Divide fluxos complexos em micro-passos digestíveis, eliminando a paralisia decisória.
+- **Vitórias Visíveis**: Registro constante do que já foi validado (`✅ Concluído: ... | 👉 Próximo: ...`).
+- **Erros Factuais e Neutros**: Zero desculpas pedantes; isolamento imediato da causa-raiz e correção com prova.
 
 ---
 
@@ -47,7 +58,7 @@ Copie o conteúdo de [`prompts/eco-protocol.me`](prompts/eco-protocol.me) e cole
 
 ## ⚡ Pilares Inegociáveis
 
-- **Zero Conversa Fiada**: Respostas diretas ao ponto, sem preâmbulos ("Com certeza!", "Entendido!") ou encerramentos vazios.
+- **Zero Conversa Fiada**: Respostas diretas ao ponto, sem preâmbulos ou encerramentos vazios.
 - **Edições Cirúrgicas**: Alteração pontual de linhas necessárias em vez de reescrever arquivos completos.
 - **Loop com Prova (Stop-the-Line)**: Toda conclusão exige o comando executado e a comprovação de saída com código 0.
 - **RLAUR (Segurança)**: Proibição absoluta de envio de chaves de API, senhas ou dados confidenciais para servidores externos.

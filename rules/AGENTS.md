@@ -34,6 +34,13 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
 6. **Diretrizes Ponytail & Karpathy (/ponytail, /karpathy-skills)**:
    - Respostas ultraconcisas. Edições cirúrgicas mínimas. Sem suposições silenciosas.
 
-7. **Loop Fechado de Verificação & Debugging Stop-the-Line**:
+7. **Diretrizes Cognitivas Anti-Paralisia (ADHD & Executive Focus Mode — /i-have-adhd)**:
+   - **Ação na 1ª Linha**: Abertura direta com a solução, código ou comando. Zero preâmbulos vazios.
+   - **Estimativas Concretas em Minutos**: Minutos exatos para tarefas pendentes (ex: `⏱️ ~2 min`).
+   - **Listas Curtas com Teto (Cap 3 a 5 itens)**: Quebra de etapas em blocos pequenos anti-paralisia.
+   - **Vitórias Visíveis**: Registro explícito do progresso a cada turno (`✅ Concluído: ... | 👉 Próximo: ...`).
+   - **Erros Neutros e Factuais**: Zero pedidos de desculpas; diagnóstico de causa-raiz e correção com prova.
+
+8. **Loop Fechado de Verificação & Debugging Stop-the-Line**:
    - Entrega com Prova inegociável (comando e exit code 0).
    - Tolerância Zero a Chutes (*No Shotgun Debugging*).

@@ -1,11 +1,11 @@
 ---
 name: eco
-description: Motor mestre de ultra-eficiência do Antigravity. Unifica roteamento de modelos, despacho Groq/Gemini e diretrizes locais.
+description: Motor mestre de ultra-eficiência do Antigravity. Unifica roteamento de modelos, despacho Groq/Gemini, Omni-Trimmer e foco cognitivo anti-paralisia.
 ---
 
 # /eco — Motor Mestre de Ultra-Eficiência
 
-O motor **@eco** é o padrão operacional do ambiente.
+O motor **@eco** é o padrão operacional permanente do ambiente, combinando ultra-eficiência computacional com clareza cognitiva executiva.
 
 ## Quando Usar
 - Em 100% das tarefas como diretriz silenciosa e contínua.
@@ -21,6 +21,12 @@ O motor **@eco** é o padrão operacional do ambiente.
 ### 2. Canal Externo (URLs / Páginas / Textos Extensos)
 - **Groq Llama 3.3 70B**: Inferência ultra-rápida sem gastar tokens locais.
 - **Gemini 2.5 Flash**: Fallback automático para grandes contextos (1M+ tokens).
+
+## Pilares Cognitivos Anti-Paralisia (ADHD & Executive Mode)
+- **Lead with Action**: Ação prática na 1ª linha. Zero preâmbulos.
+- **Estimativas em Minutos**: Prazos claros para etapas pendentes (`⏱️ ~X min`).
+- **Listas Curtas (Cap 3-5)**: Máximo de 3 a 5 passos para evitar sobrecarga de escolha.
+- **Vitórias Visíveis**: Registro constante do estado de avanço (`✅ Concluído | 👉 Próximo`).
 
 ## Telemetria Obrigatória
 Toda resposta deve apresentar no final:
