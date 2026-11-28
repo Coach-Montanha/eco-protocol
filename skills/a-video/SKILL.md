@@ -3,35 +3,34 @@ name: a-video
 description: Estudio Audiovisual Completo, Renderizador Local 9:16, FFmpeg, Legendas Hormozi, Motion Graphics e Direcao de Cena com motor @eco integrado.
 ---
 
-# 🎬 `/a-video` — Estúdio Audiovisual & Renderizador Portátil
+# 🎬 `/a-video` (ou `/insta`, `@insta`) — Estúdio Audiovisual Completo & Renderizador 9:16
 
-O `/a-video` (ou `@a-video`) centraliza toda a infraestrutura de corte, pós-produção, áudio neural, legendagem dinâmica e motion graphics local.
-- **Skills Fundidas:** `montanha-video-studio` + `video-edit` + `video-toolkit` + `video-understand` + `pixelle-video` + `cobalt` + `earshot-audio` + `motion-skills` + `motionmaxxing` + `bang-motion` + `cine` + `cinema-prompt-studio` + `higgsfield-effects` + `rhubarb-lip-sync`.
-
----
-
-## ⚡ Motor `@eco` Integrado
-1. **Processamento 100% Local**: Renderização direta via FFmpeg local e Python CLI sem gastos com nuvem de edição.
-2. **Cobalt Downloader Sem Marcas**: Baixa mídias de referência do Instagram, TikTok e YouTube sem ruído ou marcas d'água.
-3. **SoundCraft Engine**: Masterização local de áudio e balanceamento de voz a 24-bit 48kHz.
+O **`/a-video`** é a central audiovisual automatizada e local do ecossistema, combinando narração neural, sound design, legendas dinâmicas, animação 3D/2D local e renderização frame a frame.
+Funde oficialmente **20 skills satélites**: `montanha-video-studio`, `claude-animated-shorts`, `cobalt`, `video-edit`, `video-toolkit`, `video-understand`, `pixelle-video`, `producao-video-hypit`, `motionmaxxing`, `motion-skills`, `earshot-audio`, `rhubarb-lip-sync`, `cine`, `cinema-prompt-studio`, `higgsfield-effects`, `assistir-video-ia`, `onetake`, `ltx-video`, `kokon-photo`, `prompt-brand-reveal-916`.
 
 ---
 
-## 🛠️ Comandos Operacionais
-- **CLI Runner Local**:
-  `python "C:/Users/Administrator/Documents/Projetos/Montanha Video Studio/cli_runner.py" --text "<roteiro>" --title "<nome>" --format 9:16`
-- **Dual Real Video Engine**:
-  - *Opção A - Vídeo Neural*: Gemini Flash / Omni para geração de cenas e animação 4K.
-  - *Opção B - Vídeo B-Roll Narrado*: Locução neural brasileira (`edge-tts`), clipes reais sincronizados, legendas animadas `.ass` (estilo Hormozi) e SFX acústico.
-- **Direção Cinematográfica**: 34 movimentos de câmera (Dolly, Orbit, FPV, Pan) para prompts visuais precisos.
+## ⚡ Motor `@eco` & Renderizador Portátil Headless
+- **Montanha Video Studio CLI Runner (`cli_runner.py`)**:
+  - Geração local de vídeos 9:16 em 1 comando:
+    `python "C:\Users\Administrator\Documents\Projetos\Montanha Video Studio\cli_runner.py" --text "<roteiro>" --title "<nome>" --format 9:16`
+  - Narração neural pt-BR (`edge-tts`), masterização SoundCraft (24-bit 48kHz), legendas dinâmicas `.ass` no padrão Alex Hormozi e montagem FFmpeg.
+- **Download Limpo sem Marcas d'Água (`cobalt`)**: Extração de clipes reais de alta resolução para B-Roll.
 
 ---
-## 🔗 Conexões & Skills Relacionadas
-- [[Audiovisual-Video/montanha-video-studio|montanha-video-studio]]
-- [[Conteudo/video-edit|video-edit]]
-- [[Conteudo/pixelle-video|pixelle-video]]
-- [[Conteudo/cobalt|cobalt]]
-- [[Conteudo/earshot-audio|earshot-audio]]
-- [[Audiovisual-Video/motionmaxxing|motionmaxxing]]
-- [[Audiovisual/cine|cine]]
-- [[Produtividade/eco|eco]]
+
+## 🧬 Motores de Renderização Integrados
+
+### 1. Claude Animated Shorts (`claude-animated-shorts` / Three.js + Remotion)
+- Renderização local de vídeos 9:16 (55 a 70s) com mundos 3D e personagens 2D billboard no Three.js renderizados quadro a quadro no Remotion/React.
+- Legendas animadas palavra por palavra e sound effects sincronizados ao movimento.
+
+### 2. Motion Graphics Determinístico (`motionmaxxing`)
+- Pipeline de animação matemática via GSAP, Three.js, CSS e Canvas sem templates genéricos de IA.
+- Validação estrita por Quality Gates G0 a G5 (Frame accuracy, timing síncrono e fluidez a 60 FPS).
+
+### 3. Vídeo Neural DiT Local (`ltx-video`)
+- Geração de vídeo e áudio sincronizado via Diffusion Transformer (Lightricks LTX-2.5) rodando diretamente na GPU do usuário.
+
+### 4. Master Prompt Brand Reveal 9:16 (`prompt-brand-reveal-916`)
+- Vinhetas de revelação de marca em 5s vertical 4K, com física de molas elásticas, glow halo e sound design síncrono.

@@ -3,29 +3,26 @@ name: a-reversa
 description: Hub Mestre de Engenharia Reversa (Deep, Visual, Full, Binarios, APKs, Hardware e Replica Clean-Room) com motor @eco integrado.
 ---
 
-# 🧬 `/a-reversa` — Engenharia Reversa & Reconstrução Clean-Room
+# 🧬 `/a-reversa` (ou `/replica`, `@replica`) — Hub Mestre de Engenharia Reversa & Reconstrução Clean-Room
 
-O `/a-reversa` (ou `@a-reversa`) reúne todas as metodologias de inspeção reversa de binários, drivers, firmwares, aplicativos Android e replicação de sistemas web.
-- **Skills Fundidas:** `engenhariareversa` + `engenhariareversadeep` + `engenhariareversafull` + `engenhariareversavisual` + `apktool-modifier` + `clonar-interface-mimic` + `screenshot-to-code` + `reverse-api-recorder` + `rea` + `craft-anything` + `projetor-hy320-otimizador` + `xiaomi-poco-otimizador` + pacote `replica-*` (11 etapas).
-
----
-
-## ⚡ Motor `@eco` Integrado
-1. **Reconhecimento Automático do Alvo**: Identifica imediatamente se o arquivo é APK, binário PE/ELF, captura de tela ou URL.
-2. **Reconstrução Limpa (Clean-Room)**: O código reconstruído é 100% autoral em TypeScript, Tailwind CSS, SQLite ou Hono, sem carregar código proprietário ou vulnerabilidades.
+O **`/a-reversa`** é a central de engenharia reversa determinística, descompilação, análise de binários/APKs, clonagem visual e reconstrução limpa (clean-room) do Ecossistema Montanha.
+Funde oficialmente **22 skills satélites**: `replica`, `replica-*` (11 sub-skills de ciclo de vida), `engenhariareversa` (deep, visual, full), `apktool-modifier`, `projetor-hy320-otimizador`, `reverse-api-recorder`, `rea`, `clonar-interface-mimic`, `screenshot-to-code`, `craft-anything`.
 
 ---
 
-## 🔍 Modos de Execução
-- **`/a-reversa --visual`**: Captura DOM, tokens de cor, tipografia e espaçamentos de páginas ou mockups no Edge.
-- **`/a-reversa --deep`**: Descompilação de APKs via `apktool` e análise de binários/drivers via Ghidra/REA.
-- **`/a-reversa --cleanroom`**: Executa o pipeline de 5 fases da Replica (Recon -> SQL/Schema -> Tokens/Brand -> Build Vertical -> Parity Diff).
+## ⚡ Motor `@eco` & Protocolo Clean-Room
+- **Isolamento de Contaminação**: Proibido copiar código de terceiros linha por linha. A engenharia reversa extrai apenas a especificação, endpoints, contratos JSON, máquinas de estado e tokens de design.
+- **Reconstrução Independente**: Cada linha do novo sistema é escrita do zero em stack moderna (React/Tailwind, Hono, PocketBase ou Rust).
 
 ---
-## 🔗 Conexões & Skills Relacionadas
-- [[Engenharia-Reversa/engenhariareversa|engenhariareversa]]
-- [[Sistemas/replica|replica]]
-- [[Sistemas/apktool-modifier|apktool-modifier]]
-- [[Sistemas/screenshot-to-code|screenshot-to-code]]
-- [[Engenharia-Reversa-Hardware/projetor-hy320-otimizador|projetor-hy320-otimizador]]
-- [[Produtividade/eco|eco]]
+
+## 🧬 O Ciclo de Reconstrução em 5 Fases
+1. **Fase 1 — Reconhecimento (Recon)**: Varredura de rotas, captura de tráfego de rede via DevTools ou proxy, e mapeamento de componentes de interface.
+2. **Fase 2 — Modelagem Estrutural**: Criação do esquema SQL/SQLite limpo e definição de contratos de API REST/RPC.
+3. **Fase 3 — Design Tokens & Rebranding**: Extração da paleta, tipografia e espaçamentos, adaptando para a identidade visual do cliente ou do ecossistema.
+4. **Fase 4 — Build Cirúrgico**: Construção tela por tela começando pelo shell da aplicação e fluxo principal (vertical slice).
+5. **Fase 5 — Testes de Paridade**: Verificação estrutural e funcional para garantir equivalência de recursos sem código legado.
+
+### Módulos Especiais de Descompilação
+- **APKs & Android (`apktool-modifier`)**: Descompilação em smali, ajuste de permissões no `AndroidManifest.xml` e reassinatura com chave própria.
+- **Engenharia Reversa Visual (`screenshot-to-code`)**: Conversão direta de prints de telas ou mockups do Figma em código HTML/Tailwind limpo a 60 FPS.

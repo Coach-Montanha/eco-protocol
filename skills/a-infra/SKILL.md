@@ -3,24 +3,28 @@ name: a-infra
 description: Infraestrutura Auto-Hospedada Local, Backend Anti-SaaS (PocketBase, Hono), Docker e Deploy Gratuito 24/7 com motor @eco integrado.
 ---
 
-# 🧱 `/a-infra` — Infraestrutura Auto-Hospedada & Backend Anti-SaaS
+# 🧱 `/a-infra` — Infraestrutura Auto-Hospedada, Backend Anti-SaaS & Deploy 24/7
 
-O `/a-infra` (ou `@a-infra`) implementa a filosofia de independência tecnológica: substitui assinaturas SaaS caras por microsserviços e bancos de dados locais rápidos e autônomos.
-- **Skills Fundidas:** `matriz-anti-saas` + `pocketbase` + `hono` + `docker-app-runner` + `oracle-cloud-vps` + `canary-deploy` + `load-testing-k6` + `pake-desktop`.
+O **`/a-infra`** é a central de arquitetura de servidores locais, microsserviços ultrarrápidos e deploy econômico com custos mínimos ou zero do Ecossistema Montanha.
+Funde oficialmente **14 skills satélites**: `pocketbase`, `hono`, `matriz-anti-saas`, `minimind`, `oracle-cloud-vps`, `docker-app-runner`, `load-testing-k6`, `pake-desktop`, `litpage`, `ghost-cms`, `open-webui`, `free-llm-hub`, `omniroute-gateway`, `opentune-music`, `canary-deploy`, `vibe-production-checklist`.
+
+---
+
+## ⚡ Motor `@eco` & Filosofia Anti-SaaS
+- **Preferência por Binários Únicos**: Prioridade para soluções auto-hospedadas locais (`PocketBase`, `Hono`, `SQLite`, `Caddy`) que eliminam custos mensais recorrentes de terceiros (Supabase, Firebase, Auth0).
+- **Validação Empírica de Performance (`load-testing-k6`)**: Toda nova rota ou API é submetida a micro-benchmarks de carga antes de ser promovida para produção.
 
 ---
 
-## ⚡ Motor `@eco` Integrado & Princípios Anti-SaaS
-1. **Binários Únicos**: Preferência absoluta por **PocketBase** (SQLite + Auth + Realtime em 1 executável < 30MB) em vez de Supabase/Firebase.
-2. **APIs Ultrarrápidas**: Framework **Hono** em Node/Bun para webhooks e microsserviços a custo zero.
-3. **Deploy Gratuito na Oracle Cloud**: Guia e automação para hospedar até 4 OCPUs e 24GB de RAM gratuitos para sempre.
-4. **Testes de Carga k6**: Validação empírica de taxa de resposta e consumo de memória sob estresse.
+## 🧬 Componentes de Infraestrutura Fundidos
 
----
-## 🔗 Conexões & Skills Relacionadas
-- [[Sistemas/pocketbase|pocketbase]]
-- [[Sistemas/hono|hono]]
-- [[Sistemas/matriz-anti-saas|matriz-anti-saas]]
-- [[Sistemas/docker-app-runner|docker-app-runner]]
-- [[Sistemas/load-testing-k6|load-testing-k6]]
-- [[Produtividade/eco|eco]]
+1. **Backends Ultrarrápidos em Web Standards (`hono`, `pocketbase`)**:
+   - Rotas, webhooks de pagamento Pix e APIs com latência sub-milissegundo consumindo menos de 50MB de RAM.
+2. **Hospedagem Gratuita 24/7 (`oracle-cloud-vps`)**:
+   - Instâncias gratuitas permanentes na Oracle Cloud (até 4 OCPUs ARM e 24GB de RAM) para serviços ininterruptos.
+3. **Hub Agregador de Cotas de IA Gratuitas (`free-llm-hub`)**:
+   - Acesso a mais de 600 modelos de ponta sem custo de tokens para raciocínio contínuo do ecossistema.
+4. **Micro-Modelos Locais de Linguagem (`minimind`)**:
+   - Treinamento e inferência local de micro-LLMs (26M a 104M) para tarefas de classificação rápida sem depender de internet.
+5. **Streaming & Áudio Anti-SaaS (`opentune-music`)**:
+   - Player e reprodutor com letras sincronizadas LRCLIB, equalizador AutoEq e normalização de volume EBU R128.

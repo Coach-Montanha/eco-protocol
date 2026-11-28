@@ -30,7 +30,24 @@ Aplicado automaticamente para tarefas pesadas da web (varredura de múltiplos UR
 
 ---
 
-## 2. Ingestão Local Zero-Tokens (`anydoc` + `pdfcraft` + `defuddle`)
+## 2. Compressão de Contexto em Camadas (`headroom` + `context-compress` + `llmlingua`)
+
+Camada obrigatória de compressão antes de qualquer injeção de contexto volumoso ou envio ao Canal Externo:
+
+- **`headroom` (Proxy Transparente — P0)**: Intercepta automaticamente todo tráfego agente↔modelo. SmartCrusher reduz JSON 60–95%, CodeCompressor reduz código ~20–30% via AST Tree-sitter, CacheAligner maximiza KV cache hits. Instalar via `pip install "headroom-ai[all]"` + `headroom proxy --port 8787`. `headroom learn` minera falhas e escreve correções no `AGENTS.md` automaticamente.
+- **`context-compress` (Skills — P0)**: Comprime SKILL.md, AGENTS.md e steering files seletivamente: 0% em código, até 70% em prosa/paths. Sem risco de corromper regras de comportamento do agente.
+- **`llmlingua` (Documentos Volumosos — P1)**: Para skills de fisiologia/nutrição, procedimentos e atas: `rate=0.6` conservador, `force_tokens` para preservar termos técnicos (TDEE, RPE, PocketBase). Pipeline: `anydoc` → `LLMLingua-2` → contexto limpo.
+
+**Stack de compressão canônico:**
+```
+AGENTS.md/SKILL.md → context-compress (40–70%) → contexto ativo
+Tool outputs JSON  → headroom proxy (60–95%)  → Canal Externo
+Docs/Atas/PDFs     → anydoc → llmlingua-2 (40–80%) → análise
+```
+
+---
+
+## 3. Ingestão Local Zero-Tokens (`anydoc` + `pdfcraft` + `defuddle`)
 
 Proibido gastar tokens de modelos multimodais caros ou de OCR na leitura de documentos e páginas web quando ferramentas locais offline estiverem disponíveis:
 - **PDFs e Formulários**: Processar e extrair texto localmente via `pdfcraft` e CLI nativa antes de qualquer inferência.
@@ -99,7 +116,52 @@ Fundido diretamente no `@eco` a partir da metodologia de Boris Cherny (criador d
 
 ---
 
-## 9. Blindagem de Produção, Resiliência & Anti-SaaS (`vibe-production-checklist` + `matriz-anti-saas` + `pocketbase`)
+## 9. Inteligência de Código e Raciocínio Estruturado (`sequential-thinking` + `context7` + `ContextZero`)
+
+Camada de inteligência pré-implementação — acionada automaticamente antes de qualquer tarefa de código com impacto multi-arquivo:
+
+- **`sequential-thinking` (MCP Oficial — P1)**: Força raciocínio step-by-step estruturado antes de agir. Reduz backtracking 30–50% e erros de rota em tarefas arquiteturais. Auto-trigger em refatorações multi-arquivo e debugging não trivial.
+- **`context7` (Upstash MCP — P1)**: Injeta documentação versionada e precisa de bibliotecas no contexto antes de qualquer implementação. Elimina alucinações de API em stacks do ecossistema (PocketBase, Hono, Playwright, Tailwind). Auto-trigger ao detectar nome de biblioteca conhecida no pedido.
+- **`ContextZero` (Knowledge Graph Local — P2)**: PostgreSQL local com grafo de símbolos e dependências do codebase. Blast radius calculation: em vez de abrir 8 arquivos inteiros (~4.800 tokens), retorna os 3 arquivos afetados (~120 tokens). Complementa `graphify` e `code-floorplan`.
+
+**Stack canônico pré-implementação:**
+```
+Tarefa → sequential-thinking → context7 → ContextZero → code-floorplan → código
+```
+
+---
+
+## 9b. Verificação Formal de Outputs LLM (`deepeval` + `Qodo Cover` + `Playwright Agents`)
+
+Camada de verificação que fecha o loop-de-verificacao com **prova matemática** — não só exit code 0:
+
+- **`deepeval` (Pytest para LLMs — P1)**: 50+ métricas prontas (hallucination, relevancy, faithfulness, task completion). Roda localmente com pytest. Auto-trigger em qualquer output LLM que envolva cálculos de saúde/fisiologia, dados clínicos ou pipelines RAG.
+- **`Playwright Test Agents` (nativos v1.50+ — P1)**: 3 agentes integrados: `planner` (explora o app), `generator` (escreve testes) e `healer` (conserta testes quebrados automaticamente). Zero dependência nova — já disponível se playwright instalado.
+- **`Qodo Cover` (ex-CodiumAI — P2)**: Analisa comportamento semântico, não só sintaxe. Gera testes para edge cases e paths não cobertos. Adicionar ao portão pré-commit do `gatekeeper`.
+
+**Stack canônico de verificação:**
+```
+Implementação → deepeval (qualidade LLM) → Qodo Cover (edge cases) → loop-de-verificacao (exit 0 + prova)
+```
+
+---
+
+## 9c. Sugestão Ativa e Proativa (`sugestao-ativa`)
+
+Protocolo comportamental sempre ativo. Toda resposta de código inclui obrigatoriamente:
+
+```markdown
+✅ Implementado: [código]
+⚠️ Risco não solicitado: [edge case ou dependência oculta]
+💡 Otimização disponível: [1 linha — sem ensaio]
+🔗 Próximo passo lógico: [comando ou código direto]
+```
+
+Regras inegociáveis: cap de 3 riscos (anti-paralisia ADHD), 1 linha de otimização (sem ensaio), próximo passo concreto (não "testar o código").
+
+---
+
+## 10. Blindagem de Produção, Resiliência & Anti-SaaS (`vibe-production-checklist` + `matriz-anti-saas` + `pocketbase`)
 
 - **Resiliência Nativa**: Toda rota, script ou serviço gerado sob `/eco` deve atender ao checklist de produção: idempotência em operações de escrita/pagamento, limites de taxa defensivos (*rate limiting*), tratamento estrito de timeout de rede e criação obrigatória de índices em colunas de busca no SQLite/PocketBase.
 - **Arquitetura Anti-SaaS Local**: Eliminação sistemática de serviços de nuvem pagos de terceiros (Auth0, Firebase, Supabase, Typeform) substituindo-os por binários únicos autônomos locais (PocketBase, SQLite, Hono, Litpage).
@@ -148,7 +210,27 @@ Sempre que o motor `/eco` estiver ativo ou for disparado, avaliar automaticament
 
 ---
 
-## 13. Telemetria de Tokens & Relatório de Economia Obrigatório
+## 13. Motor Meta-Prompt Deep & Auto-Elevação por Objetivo Profundo (`/meta-prompt-deep`)
+
+O motor `/eco` intercepta automaticamente qualquer solicitação, bug ou feature descrita pelo usuário e aplica a **Regra do Objetivo Profundo** (@fabianocarvalhojr):
+- **Elevação Automática de Nível**: Em vez de executar apenas a tarefa operacional imediata ("arruma esse bug", "muda esse botão", "faz essa tela"), o agente deduz e projeta o objetivo de alto nível por trás do pedido (resiliência de arquitetura, tratamento preventivo de falhas de rede, imunização contra regressões e padrões de software sênior).
+- **Sem Remendos Superficiais**: Bloqueia curativos cosméticos que quebram na primeira mudança de ambiente.
+- **Auto-Imunização Contínua**: Cada correção ou implementação fecha com prova determinística de execução e testes para garantir que erros passados não retornem.
+
+---
+
+## 14. Diretrizes Cognitivas Anti-Paralisia (ADHD & Executive Focus Mode — `/i-have-adhd`)
+
+O `/eco` integra nativamente os pilares de otimização cognitiva e redução de sobrecarga mental (baseado no `ayghri/i-have-adhd`):
+- **Ação na Primeira Linha (*Lead with Action*)**: A resposta inicia imediatamente com a execução técnica, comando direto ou diagnóstico comprovado. Proibido preâmbulos ou saudações vazias.
+- **Estimativas Temporais Concretas**: Tarefas em lote, compilações ou passos de execução recebem estimativa clara em minutos (ex: `⏱️ Tempo estimado: ~2 min`), combatendo a cegueira temporal.
+- **Listas Curtas com Teto (Cap 3 a 5 itens)**: Quebra de etapas complexas em listas limitadas a 3-5 itens por vez, prevenindo sobrecarga cognitiva e paralisia de escolha.
+- **Vitórias Visíveis & Estado Claro**: Registro explícito do progresso a cada turno longo (`✅ Concluído: ... | 👉 Próximo: ...`).
+- **Erros Factuais Neutros**: Zero desculpas pedantes; apenas a identificação da causa-raiz, o arquivo afetado e a correção cirúrgica comprovada.
+
+---
+
+## 15. Telemetria de Tokens & Relatório de Economia Obrigatório
 
 Em cumprimento à diretriz global permanente do `@eco`, toda resposta ao usuário deve concluir com a aferição transparente da economia gerada pelo motor:
 - **Gasto Real**: Tokens consumidos na requisição otimizada com `@eco` (execução local, scripts pontuais, mcptoon, qualquer ingestão zero-tokens).

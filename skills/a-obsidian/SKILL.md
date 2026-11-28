@@ -3,32 +3,25 @@ name: a-obsidian
 description: Hub Central de Gestao do Cofre Obsidian, Criacao de Notas Atomicas, Wikilinks, Bases Estruturadas e Canvas com motor @eco integrado.
 ---
 
-# 📓 `/a-obsidian` — Gestão Central do Cofre & Ingestão de Conhecimento
+# 📓 `/a-obsidian` (ou `/obsidian-flow`, `@obsidian-flow`) — Central de Gestão do Cofre Obsidian
 
-O `/a-obsidian` (ou `@a-obsidian`) é o orquestrador supremo do seu segundo cérebro no Obsidian (`Obsidian-Cofre-Montanha`).
-- **Skills Fundidas:** `obsidian-flow` + `obsidian-markdown` + `obsidian-bases` + `obsidian-cli` + `json-canvas` + `knap` + `litpage`.
-
----
-
-## ⚡ Conexão Nativa & Automática com o Motor `@eco`
-> **Gatilho de Sincronização Autônoma**: Sempre que o motor `@eco` for disparado ou estiver ativo, ele avalia automaticamente se a interação atual gerou novas notas, decisões arquiteturais, especificações, atas, termos ou conceitos que devam ser persistidos no cofre. Se aplicável, `/a-obsidian` dispara em conjunto de forma silenciosa e eficiente.
-
-1. **Ingestão Zero-Tokens**: Converte PDFs, documentos e páginas web diretamente em Markdown limpo antes de salvar.
-2. **Wikilinks Bidirecionais (`[[...]]`)**: Cria e preserva a malha de links entre notas de forma automática.
-3. **Bases Estruturadas (.base) & Canvas (.canvas)**: Constrói visualizações gráficas de nós e bancos locais em SQLite/Markdown.
+O **`/a-obsidian`** é o hub oficial de gestão de conhecimento pessoal, documentação técnica e sincronização contínua do cofre `Obsidian-Cofre-Montanha`.
+Funde oficialmente **6 skills satélites**: `obsidian-flow`, `obsidian-cli`, `obsidian-markdown`, `obsidian-bases`, `json-canvas`, `knap`.
 
 ---
 
-## 🛠️ Comandos Operacionais
-- **Criação Atômica**: Gera novas notas com frontmatter padronizado (título, tags, data).
-- **Sincronização de Índices**: Mantém `INDICE_MESTRE_SKILLS.md` e `Hubs-Consolidados.md` perfeitamente alinhados.
-- **Busca Semântica no Cofre**: Consulta notas e conceitos existentes via CLI local sem gastar tokens.
+## ⚡ Motor `@eco` & Gatilho Automático Permanente
+- **Knowledge Sync Silencioso**: Sempre que o motor `@eco` estiver ativo e uma tarefa gerar decisões arquiteturais, especificações, atas de reunião ou novas skills, o `/a-obsidian` é disparado automaticamente para persistir os arquivos no cofre e atualizar os índices (`INDICE_MESTRE_SKILLS.md` e `Hubs-Consolidados.md`) com sincronização Git.
 
 ---
-## 🔗 Conexões & Skills Relacionadas
-- [[Skills/Produtividade/obsidian-flow|obsidian-flow]]
-- [[Skills/Sistemas/obsidian-markdown|obsidian-markdown]]
-- [[Skills/Sistemas/obsidian-bases|obsidian-bases]]
-- [[Skills/Sistemas/json-canvas|json-canvas]]
-- [[Skills/Produtividade/eco|eco]]
-- [[Skills/Hubs-Consolidados.md|Hubs-Consolidados]]
+
+## 🧬 Estruturas Suportadas
+
+1. **Obsidian Flavored Markdown (`obsidian-markdown`)**:
+   - Wikilinks bidirecionais (`[[...]]`), callouts visuais (`> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`) e frontmatter YAML padronizado.
+2. **Bases Estruturadas (`obsidian-bases`)**:
+   - Arquivos `.base` com esquemas relacionais leves para tabelas dinâmicas e filtros locais sem plugins pesados.
+3. **JSON Canvas (`json-canvas`)**:
+   - Diagramas visuais interativos `.canvas` com nós, grupos e conexões para mapeamento mental de projetos.
+4. **Ingestão Zero-Tokens (`knap`)**:
+   - Conversão e renderização instantânea de templates a partir de dados JSON.

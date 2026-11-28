@@ -21,6 +21,12 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
 2. **Ingestão Zero-Tokens de Mídia & Documentos (`anydoc` / `pdfcraft` / `defuddle`)**:
    - Proibido gastar tokens de visão ou OCR em arquivos PDF, DOCX, XLSX ou páginas web.
    - Todo documento e URL é convertido localmente para Markdown limpo via `anydoc`, `pdfcraft` ou `defuddle` antes da análise.
+   - **Pós-ingestão obrigatória**: documentos volumosos (skills de fisiologia, procedimentos, atas) passam por `llmlingua` (rate=0.6) antes de injeção em contexto. Preservar termos técnicos via `force_tokens`.
+
+2a. **Compressão de Contexto em Camadas (`headroom` + `context-compress` + `llmlingua`)**:
+   - **`headroom` proxy ativo (P0)**: intercepta automaticamente tráfego agente↔modelo. SmartCrusher reduz JSON 60–95%, CodeCompressor reduz código ~20–30%. `headroom learn` minera falhas e escreve correções no AGENTS.md automaticamente.
+   - **`context-compress` (P0)**: comprime SKILL.md e AGENTS.md seletivamente (0% em código, até 70% em prosa/paths) antes de injetar em contexto ativo. Zero risco de corromper regras de comportamento.
+   - **`llmlingua-2` (P1)**: compressão de 40–80% em skills volumosas de fisiologia/nutrição/procedimentos antes de análise.
 
 3. **Reuso Estrito Anti-Reinvenção da Roda (`search-first`)**:
    - Antes de escrever qualquer novo utilitário ou função auxiliar, verificar:
@@ -61,6 +67,25 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
    - **Graphify**: Inspeção de grafos de relacionamento AST antes de refatorações de código.
    - **Auto-Ontology & MicroKit**: Construção de ontologias semânticas sem alucinação e interfaces leves a 60 FPS.
 
+8a. **Inteligência de Código Pré-Implementação (`/sequential-thinking`, `/context7`, `ContextZero`)**:
+    - **`sequential-thinking` (MCP Oficial — P1)**: Auto-trigger obrigatório antes de qualquer refatoração multi-arquivo ou debugging não trivial. Força decomposição em hipóteses sequenciais antes de agir. Reduz backtracking 30–50%.
+    - **`context7` (Upstash MCP — P1)**: Auto-trigger ao detectar nome de biblioteca no pedido (PocketBase, Hono, Playwright, Tailwind, Remix, Prisma, Drizzle). Injeta documentação versionada e precisa — elimina alucinações de API.
+    - **`ContextZero` (Knowledge Graph Local — P2)**: Consulta dinâmica de blast radius por símbolo/função. 97% menos tokens vs. abrir arquivos inteiros. Complementa `graphify` (mapa estático) e `code-floorplan` (cartografia).
+    - **Stack canônico pré-implementação**: `sequential-thinking` → `context7` → `ContextZero` → `code-floorplan` → código.
+
+8b. **Verificação Formal de Outputs LLM (`/deepeval`, `Playwright Test Agents`, `Qodo Cover`)**:
+    - **`deepeval` (P1)**: Auto-trigger em qualquer output LLM que envolva cálculos de saúde/fisiologia, dados clínicos ou pipelines RAG. 50+ métricas: hallucination, relevancy, faithfulness. Fecha o `loop-de-verificacao` com prova matemática — não só exit code 0.
+    - **`Playwright Test Agents` (P1)**: Agentes nativos do Playwright (planner, generator, healer). `healer` conserta testes quebrados automaticamente. Zero dependência nova.
+    - **`Qodo Cover` (P2)**: Gera testes para edge cases e paths não cobertos semanticamente. Adicionar ao portão pré-commit do `gatekeeper`.
+    - **Stack canônico de verificação**: código → `deepeval` → `Qodo Cover` → `loop-de-verificacao` (exit 0 + prova matemática).
+
+8c. **Protocolo de Sugestão Ativa (`/sugestao-ativa`) — Sempre Ativo**:
+    - Toda resposta de código inclui obrigatoriamente, sem ser solicitado:
+      - `⚠️` Risco não pedido (edge case, dependência oculta) — cap de 3 itens
+      - `💡` Otimização disponível (1 linha, sem ensaio)
+      - `🔗` Próximo passo lógico (comando ou código concreto)
+    - Regras: nunca sugerir mais de 3 riscos (anti-paralisia ADHD), nunca escrever ensaio sobre otimização, nunca sugerir próximo passo óbvio demais.
+
 9. **Blindagem de Produção, Resiliência & Anti-SaaS (/vibe-production-checklist, /matriz-anti-saas, /pocketbase)**:
    - Toda API, rota, script ou serviço deve nascer pronto para produção: idempotência em operações mutáveis, rate limiting defensivo, timeout em conexões de rede e índices obrigatórios em consultas SQLite/PocketBase.
    - Preferência absoluta por binários únicos locais e arquiteturas auto-hospedadas (PocketBase, SQLite, Hono, Caddy) eliminando custos e dependências de nuvens terceiras (Supabase, Firebase, Auth0).
@@ -76,6 +101,18 @@ Todos os protocolos de eficiência, despacho e qualidade (`/omniroute`, `/router
 12. **Gatilho de Sincronização Autônoma /a-obsidian (Knowledge Sync Nativo)**:
     - Sempre que o motor `@eco` for disparado ou estiver ativo, avaliar automaticamente se a tarefa gerou novas notas, decisões arquiteturais, especificações, atas, termos ou conceitos que devam ser persistidos no cofre Obsidian (`Obsidian-Cofre-Montanha`).
     - Se aplicável, acionar automaticamente o `/a-obsidian` em conjunto para persistir os arquivos em Markdown limpo com wikilinks bidirecionais e manter os índices (`INDICE_MESTRE_SKILLS.md` e `Hubs-Consolidados.md`) perfeitamente atualizados, sem exigir comandos manuais separados.
+
+13. **Motor Meta-Prompt Deep & Auto-Elevação por Objetivo Profundo (/meta-prompt-deep)**:
+    - O motor `@eco` intercepta incondicionalmente qualquer tarefa, bug, feature ou pedido expresso pelo usuário e aplica a **Regra do Objetivo Profundo** (@fabianocarvalhojr).
+    - Em vez de acatar cegamente a tarefa superficial e pontual ("arruma esse bug", "muda essa cor", "faz essa função"), eleva o raciocínio para a causa-raiz sistêmica, resiliência estrutural, isolamento de efeitos colaterais e auto-imunização definitiva contra regressões.
+    - O agente atua com a postura de um Arquiteto de Software Sênior: proíbe curativos cosméticos, antecipa falhas de borda e fecha o loop com provas determinísticas de execução.
+
+14. **Diretrizes Cognitivas Anti-Paralisia (ADHD & Executive Focus Mode — /i-have-adhd)**:
+    - **Ação na Primeira Linha (*Lead with the Next Action*)**: A resposta abre imediatamente com a ação executada, código cirúrgico ou comando a rodar. Zero preâmbulos ("Com certeza!", "Ótima pergunta!").
+    - **Estimativas Concretas em Minutos**: Sempre que houver tarefas em lote, compilações ou passos pendentes, fornecer estimativa direta em minutos (ex: `⏱️ Tempo estimado: ~2 min`), eliminando termos vagos ("em breve", "demora um pouco").
+    - **Listas Curtas com Teto (Cap 3 a 5 itens)**: Quebrar fluxos complexos em blocos de no máximo 3 a 5 passos digestíveis, eliminando a paralisia decisória e sobrecarga de contexto.
+    - **Vitórias Visíveis & Âncora de Estado**: Registrar claramente o progresso a cada turno longo (`✅ Concluído: ... | 👉 Próximo: ...`) para ancoragem do foco executivo.
+    - **Erros Neutros e Factuais**: Zero desculpas pedantes ("Peço perdão pelo equívoco"). Apenas o relato técnico, causa-raiz isolada e correção comprovada.
 
 ---
 
@@ -114,6 +151,7 @@ Unifica `lpo-crosstraining` (Everett LPO), `opex-coaching-system` (OPEX BMR/TDEE
 
 1. **Triagem & Auto-Trigger Semântico por Intenção**:
    - A IA reconhece a intenção do usuário e aplica os protocolos internos automaticamente sem exigir comandos de barra (/):
+     - **Objetivo Profundo, Arquitetura, Bugs, Código, Refatoração**: Ativação autônoma imediata de `meta-prompt-deep` + `loop-de-verificacao` + `debugging-and-error-recovery` + `ponytail` + `karpathy-skills` + `sequential-thinking` + `context7` + `deepeval` + `sugestao-ativa`. Elevação automática de pedidos leigos ou superficiais para o objetivo arquitetural profundo, com imunização contra regressões e validação com prova matemática (deepeval + exit code 0).
      - **Fisiologia, Treinos, Cargas, LPO, Dieta, TDEE, Jejum**: Ativação autônoma imediata de `montanha-coach` + `nutricao-avancada-montanha` + `opex-coaching-system` + `lpo-crosstraining` + `minha-voz`. Cálculo exato de TDEE ($BMR+TEF+EEE+NEAT$), macros em g/kg LBM, protocolos PSMF/SFP (Lyle McDonald), Eat Stop Eat (Pilon) e Metcons sustentáveis com taxas 1:1/1:2.
      - **Força Bruta, Periodização Ondulatória, RPE, 5/3/1**: Ativação imediata de `strength-systems-programming` + `montanha-coach`. Sistemas Starting Strength, Texas Method, Wendler 5/3/1, Juggernaut e autoregulação por RPE/RIR (Tuchscherer).
      - **Testes Atléticos, Força Máxima, Potência (RFD), Condicionamento Tático**: Ativação imediata de `nsca-conditioning-standards` + `montanha-coach`. Volumes por fase, baterias de testes (1RM, salto, agilidade T) e descansos bioenergéticos.

@@ -1,40 +1,38 @@
 ---
 name: a-impeccable
-description: Hub Mestre de UI/UX, Design Systems, Eliminacao de Slop de IA, Fisica de Molas a 60 FPS e Mobile HIG Apple com motor @eco integrado.
+description: Hub Mestre de UI/UX, Design Systems, Eliminacao de Slop de IA (Unslop Anything), Fisica de Molas a 60 FPS e Mobile HIG Apple com motor @eco integrado.
 ---
 
-# ✨ `/a-impeccable` — Craftsmanship Frontend & Design System Anti-Slop
+# ✨ `/a-impeccable` — Hub Mestre de UI/UX Craftsmanship & Anti-Slop de IA
 
-O `/a-impeccable` (ou `@a-impeccable`) é a garantia inegociável de qualidade visual, fluidez e ergonomia em interfaces Tailwind CSS, React e HTML5.
-- **Skills Fundidas:** `impeccable` + `unslop` + `taste-skill` + `stageshow` + `emil-design-eng` + `apple-design` + `apple-bento-grid` + `mobile-ux-engine` + `web-design-guidelines` + `front-end-checklist` + `ui-ux-pro-max` + `react-bits` + `steacode-ui` + `figma-mcp` + `astryx` + `midday-financial-ui` + `ux-laws-design`.
-
----
-
-## ⚡ Motor `@eco` Integrado
-1. **Zero CSS Bloat**: Proibido adicionar pacotes pesados de componentes quando HTML/Tailwind puro resolve a 60 FPS.
-2. **Auditoria em 9 Passes (`unslop`)**: Remoção automática de gradientes roxos neon, bordas cintilantes e cards genéricos gerados por IA.
-3. **Regra de Cores 60-30-10**: 60% fundo neutro dominante, 30% estrutura secundária e 10% cor de destaque intencional.
+O **`/a-impeccable`** é a autoridade máxima em design de interface, engenharia de microinterações e acabamento refinado de software frontend no Ecossistema Montanha.
+Funde oficialmente **16 skills satélites**: `impeccable`, `unslop` (Unslop Anything), `taste-skill`, `stageshow`, `astryx`, `ui-ux-pro-max`, `apple-design`, `apple-bento-grid`, `mobile-app-ui-design`, `mobile-ux-engine`, `emil-design-eng`, `react-bits`, `steacode-ui`, `midday-financial-ui`, `ux-laws-design`, `web-design-guidelines`, `front-end-checklist`.
 
 ---
 
-## 📱 Regras Mobile & Craftsmanship Inegociáveis
-1. **Inputs sem Auto-Zoom no iOS**: Todo elemento `<input>`, `<textarea>` e `<select>` DEVE ter fonte mínima de **16px** (evita zoom forçado no Safari Mobile).
-2. **Hit Targets Ergonômicos**: Botões e áreas clicáveis devem ter no mínimo **44x44px** (ou **56x56px** para telas de treino e cronômetros).
-3. **Física Natural de Molas (Springs)**: Microinterações sem curvas lineares duras; uso de amortecimento natural inspirado no HIG da Apple.
-4. **Disciplina Sagrada de Unidades CSS & Viewport Responsivo (Cheat Sheet Anti-Overflow)**:
-   - `rem` → **Tipografia e Font Sizes**: Segue a raiz do navegador (`16px`), garantindo escalabilidade e acessibilidade previsíveis.
-   - `%` e `dvh`/`vh` → **Layouts, Larguras e Alturas Fluidas**: Elementos e capas de mídia devem encolher proporcionalmente ao contêiner (`max-h-[35vh]` / `w-full`), impedindo que imagens rígidas em `px` empurrem controles para fora da tela em celulares compactos.
-   - `px` → **Bordas, Sombras e Divisores**: Exclusivo para detalhes milimétricos estáticos de precisão fixa (`border-1`, `shadow-md`, `rounded-full`).
-   - `vw` e `dvh` → **Seções e Modais Full-Screen**: Uso de `h-[100dvh]` com `pb-[env(safe-area-inset-bottom)]` para nunca ser cortado pelas barras dinâmicas do navegador (Safari/Chrome/Edge) ou pela barra de navegação do sistema operacional.
-   - `em` → **Paddings Proporcionais**: Ideal para botões e badges que devem escalar proporcionalmente ao tamanho do texto interno.
+## ⚡ Motor `@eco` & Diretrizes Mobile Inegociáveis
+- **Regra Anti-Zoom do iOS Safari**: Todo `<input>`, `<select>` e `<textarea>` deve ter `font-size: 16px` no mínimo (ou `text-base`), impedindo o zoom injeção indesejado no iPhone.
+- **Área Mínima de Toque (Hit Targets)**: Botões e elementos interativos devem ter $\ge 44 \times 44$px no geral, e $\ge 56 \times 56$px em interfaces de treino, cronômetros e contagem de séries para permitir clique fácil com mãos suadas.
 
 ---
-## 🔗 Conexões & Skills Relacionadas
-- [[Design/impeccable|impeccable]]
-- [[Design-UI-UX/unslop|unslop]]
-- [[Design-UI-UX/taste-skill|taste-skill]]
-- [[Design-UI-UX/stageshow|stageshow]]
-- [[Design-UI-UX/emil-design-eng|emil-design-eng]]
-- [[Design/apple-design|apple-design]]
-- [[Desenvolvimento/web-design-guidelines|web-design-guidelines]]
-- [[Produtividade/eco|eco]]
+
+## 🧬 Protocolos & Padrões Fundidos
+
+### 1. Auditoria Unslop Anything (Visual + Estrutural)
+Elimina sumariamente qualquer vestígio de estética "vibecoded" genérica de IA:
+1. *Superfície e Cores*: Substitui gradientes roxos/azuis de IA por paletas sóbrias com a regra 60-30-10 (60% neutro, 30% suporte escuro, 10% acento calibrado).
+2. *Bordas & Glows*: Substitui brilhos artificiais por bordas sutis de 1px (`border-white/[0.08]`) e sombras suaves multicamadas.
+3. *Microcopy Anti-Clichê (`unslop-ui`)*:
+   - Elimina tags flutuantes tipo `INTRODUCING...` e numerações falsas `01 //`.
+   - Remove "botsplaining" (*"clique no botão acima para..."*) e subtítulos redundantes.
+   - Limpa badges falsos de status (`v2.4 / live`) desconectados de lógica real.
+4. *Iconografia Limpa*: Substitui emojis usados como ícones de botões por SVGs consistentes (`lucide-react` ou `@tabler/icons`).
+5. *Tipografia Refinada*: Números tabulares monoespaçados (`tabular-nums`) para dados e métricas; Inter/SF Pro para leitura.
+
+### 2. Física de Molas a 60 FPS (`emil-design-eng`, `stageshow`)
+- Microinterações baseadas em molas naturais (`damping: 25`, `stiffness: 300`) em vez de transições lineares duras ou curvas cúbicas artificiais.
+- Efeito Liquid Glass e Glow Halo dinâmico acelerado por GPU (`will-change: transform`, `backdrop-blur`).
+
+### 3. Apple Bento Grid & HIG Apple (`apple-design`, `apple-bento-grid`)
+- Cantos contínuos (squircle) via `rounded-2xl` ou `rounded-3xl`.
+- Contenção visual rígida, hierarquia tipográfica precisa e separação clara entre áreas de toque e áreas de leitura.

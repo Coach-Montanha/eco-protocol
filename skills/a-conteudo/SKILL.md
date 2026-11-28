@@ -3,31 +3,36 @@ name: a-conteudo
 description: Esteira Editorial Completa de Producao de Conteudo, Carrosseis, Roteiros, Stories Magneticos e Arquetipos Persuasivos com motor @eco integrado.
 ---
 
-# ✍️ `/a-conteudo` — Esteira Editorial Master & Copywriting Persuasivo
+# ✍️ `/a-conteudo` (ou `@criador`) — Esteira Editorial Completa & Copywriting Magnético
 
-O `/a-conteudo` (ou `@a-conteudo`) é a central unificada de planejamento, redação e roteirização para redes sociais (Instagram, YouTube, TikTok e LinkedIn).
-- **Skills Fundidas:** `esteira-2-camadas-conteudo` + `esteira-30-dias-conteudo` + `montar-esteira-conteudo-ia` + `formato-carrossel` + `formato-roteiro` + `stories-10x-copy` + `arquetipos-persuasao` + `minha-voz` + `openreply`.
-
----
-
-## ⚡ Motor `@eco` Integrado
-1. **Ingestão Zero-Tokens de Pauta**: Converte áudios e atas em Markdown limpo antes da geração de texto.
-2. **Geração Multiformato em Passo Único**: A partir de um único tema ou áudio de 30 minutos, gera simultaneamente o carrossel, o roteiro vertical e a sequência de stories sem reprocessar o contexto.
+O **`/a-conteudo`** é o hub mestre editorial do Ecossistema Montanha, responsável por planejar, roteirizar e estruturar 30 dias de conteúdo em formatos magnéticos para Instagram, YouTube e redes sociais.
+Funde oficialmente **10 skills satélites**: `esteira-30-dias-conteudo`, `esteira-2-camadas-conteudo`, `arquetipos-persuasao`, `formato-carrossel`, `formato-roteiro`, `stories-10x-copy`, `radar-outliers-virais`, `last30days-skill`, `montar-esteira-conteudo-ia`, `minha-voz`.
 
 ---
 
-## 📦 Entregas do Pipeline `/a-conteudo`
-1. **Carrossel 1:1 de Alto Impacto**: 7 a 10 slides no padrão Coach Montanha (Gancho visual -> Quebra de mito -> Princípio científico -> Aplicação prática -> CTA).
-2. **Roteiro 9:16 Dinâmico**: Roteirização para Reels/Shorts calibrada rigorosamente para 2,5 palavras por segundo com ganchos nos primeiros 3 segundos.
-3. **Sequência de Stories 10x**: Narrativas diárias magnéticas com caixinhas de perguntas, bastidores e quebras de padrão.
-4. **Arquétipos Junguianos & Robert Greene**: Ganchos da Sombra, Autoridade Visceral e Rebeldia Disciplinada.
+## ⚡ Motor `@eco` & Métricas Inegociáveis
+- **Ritmo de Fala e Leitura**: Roteiros de Reels/Shorts calibrados estritamente a **2,5 palavras por segundo** (150 palavras = 60s exatos).
+- **Voz Autêntica (`minha-voz`)**: Histórias reais, bastidores sem filtro, anti-slop e anti-clichê.
 
 ---
-## 🔗 Conexões & Skills Relacionadas
-- [[Conteudo/formato-carrossel|formato-carrossel]]
-- [[Conteudo/formato-roteiro|formato-roteiro]]
-- [[Conteudo/stories-10x-copy|stories-10x-copy]]
-- [[Conteudo/arquetipos-persuasao|arquetipos-persuasao]]
-- [[Conteudo/minha-voz|minha-voz]]
-- [[Conteudo/insta|insta]]
-- [[Produtividade/eco|eco]]
+
+## 🧬 Motores & Fluxos Fundidos
+
+### 1. Radar de Outliers Virais & Inteligência dos Últimos 30 Dias (`last30days-skill`, `radar-outliers-virais`)
+- Monitoramento de perfis médios (30k a 80k seguidores) para capturar anomalias estatísticas (**20x mais visualizações** que a média da conta).
+- Varredura em tempo real dos últimos 30 dias no Reddit, X, YouTube e comunidades para extrair dores reais da audiência.
+- Ingestão offline via `yt-dlp` e transcrição determinística via `faster-whisper`.
+
+### 2. Arquétipos Persuasivos (Jung & Robert Greene)
+- **Gancho da Sombra**: Evoca a dor ou frustração que a pessoa tenta esconder do personal.
+- **O Rebelde**: Desmonta mitos tradicionais da indústria fitness com ciência de trincheira.
+- **O Sábio Prático**: Traduz fisiologia complexa em ações aplicáveis amanhã de manhã.
+
+### 3. A Esteira de 30 Dias em 7 Fluxos
+1. *Áudio Bruto de 15 min*: Despejo de ideias do especialista.
+2. *Matriz 3x3*: 3 Pilares Técnicos x 3 Níveis de Consciência.
+3. *30 Ganchos Viscerais*: Frases de impacto inicial.
+4. *15 Roteiros 9:16*: Vídeos verticais de alta retenção.
+5. *10 Carrosséis 1:1*: Formato diagnóstico e passo a passo.
+6. *Sequências de Stories 10x*: Narrativas diárias com enquetes de engajamento no direct.
+7. *Distribuição Agendada*.

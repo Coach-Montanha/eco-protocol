@@ -3,41 +3,29 @@ name: a-gsd
 description: Framework Spec-Driven Development (SDD), Memory Bank, Cartografia de Codigo e Planejamento Atomico com motor @eco integrado.
 ---
 
-# 📋 `/a-gsd` — Get Shit Done & Spec-Driven Development Master
+# 📋 `/a-gsd` — Spec-Driven Development (SDD), Memory Bank & Cartografia de Código
 
-O `/a-gsd` (ou `@a-gsd`) unifica a metodologia Spec-Driven Development, estruturação de planos atômicos e cartografia de software sem perda de contexto (*Zero Context Decay*).
-- **Skills Fundidas:** `gsd` + `gsd-core` + `speckit` + `spec-kit-magoo` + `brainstorm` + `writing-plans` + `code-floorplan` + `vibe-coding-toolkit` + `vibe-production-checklist` + `graphify` + `mcptoon`.
-
----
-
-## ⚡ Motor `@eco` Integrado
-1. **Memory Bank em Disco**: Descarrega o estado da memória de trabalho do chat para arquivos leves em disco (`PROJECT.md`, `STATE.md`, `ROADMAP.md`).
-2. **Cartografia Code-Floorplan**: Mapeia setores, motores e persistência em 4 camadas cirúrgicas, evitando leitura cega de arquivos inteiros.
-3. **mcptoon Integrado**: Compactação de schemas MCP em até 99% para blindar o contexto.
+O **`/a-gsd`** é o hub de governança de projetos, planejamento atômico e cartografia arquitetural de software do Ecossistema Montanha.
+Funde oficialmente **11 skills satélites**: `gsd`, `gsd-core`, `superpowers`, `speckit`, `spec-kit-magoo`, `vibe-coding-toolkit`, `writing-plans`, `code-floorplan`, `mcptoon`, `graphify`, `brainstorm`, `roo-code`.
 
 ---
 
-## 🔄 O Ciclo SDD em 4 Fases
-```
- [ Discuss / Brainstorm ] -> Ideação socrática e clarificação de requisitos.
-          │
-          ▼
- [ Plan / Floorplan ]     -> Divisão em fatias atômicas de 2 a 5 minutos.
-          │
-          ▼
- [ Execute / Ralph ]      -> Implementação disciplinada sem shotgun debugging.
-          │
-          ▼
- [ Verify / Healing ]     -> Validação fechada com pedido com prova (Exit Code 0).
-```
+## ⚡ Motor `@eco` & Zero Context Decay
+- **Memory Bank Permanente**: Descarrega o contexto volátil do chat para arquivos estruturados no disco (`PROJECT.md`, `STATE.md`, `ROADMAP.md`), permitindo retomar projetos semanas depois com zero perda de alinhamento.
+- **mcptoon (Compactação de 99%)**: Minificação dinâmica de schemas de ferramentas MCP para poupar o orçamento de tokens da janela de contexto.
 
 ---
-## 🔗 Conexões & Skills Relacionadas
-- [[Sistemas/gsd-core|gsd-core]]
-- [[Sistemas/code-floorplan|code-floorplan]]
-- [[Sistemas/vibe-coding-toolkit|vibe-coding-toolkit]]
-- [[Produtividade/writing-plans|writing-plans]]
-- [[Produtividade/brainstorm|brainstorm]]
-- [[Sistemas/graphify|graphify]]
-- [[Sistemas/healing|healing]]
-- [[Produtividade/eco|eco]]
+
+## 🧬 O Ciclo Spec-Driven Development em 5 Fases
+
+1. **Fase 1 — Discuss & Brainstorm Socrático (`brainstorm`, `superpowers`)**:
+   - Extrai requisitos profundos, identifica trade-offs e esclarece dúvidas antes de qualquer código ser escrito.
+2. **Fase 2 — Plan & Cartografia Atômica (`writing-plans`, `code-floorplan`)**:
+   - Mapeia a arquitetura em 4 camadas (Setores, Motores, Persistência, Pontes).
+   - Divide a execução em tarefas atômicas de 2 a 5 minutos com critérios de aceitação claros.
+3. **Fase 3 — Execute & TDD Estrito (`superpowers`)**:
+   - Escreve testes primeiro, implementa o código mínimo necessário (filosofia Ponytail) e avança passo a passo.
+4. **Fase 4 — Verify (Validação com Prova)**:
+   - Executa a suíte de testes e typecheck comprovando código de saída 0.
+5. **Fase 5 — Validate & Sincronização**:
+   - Atualiza o Memory Bank e registra decisões no cofre Obsidian.
