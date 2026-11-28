@@ -6,12 +6,14 @@ description: Hub Mestre de Cartografia de Codebases, Arquitetura de Sistemas, Gr
 # 🧠 `/a-understand` — Cartografia de Codebases, Arquitetura & Grafos de Conhecimento
 
 O **`/a-understand`** é o hub mestre para compreensão profunda, visualização em grafos de conhecimento (AST) e rastreamento de fluxos de domínio em projetos de qualquer porte.
-Funde oficialmente **11 skills satélites**: `understand`, `understand-chat`, `understand-dashboard`, `understand-diff`, `understand-domain`, `understand-explain`, `understand-figma`, `understand-knowledge`, `understand-onboard`, `auto-ontology`, `code-floorplan`.
+Funde oficialmente **13 skills satélites**: `understand`, `understand-chat`, `understand-dashboard`, `understand-diff`, `understand-domain`, `understand-explain`, `understand-figma`, `understand-knowledge`, `understand-onboard`, `auto-ontology`, `code-floorplan`, `sequential-thinking`, `context7`.
 
 ---
 
 ## ⚡ Motor `@eco` & Zero-Token AST Indexing
 - **Mapeamento Prévio Obrigatório**: Antes de qualquer refatoração massiva ou alteração de arquitetura, gera o grafo de dependências e impactos para evitar efeitos colaterais silenciosos.
+- **Raciocínio Estruturado de Blast Radius (`sequential-thinking`)**: Avalia o raio de impacto de cada mudança em cadeia lógica antes de inspecionar arquivos em disco.
+- **Documentação Versionada Nativamente (`context7`)**: Mapeia convenções e padrões dos frameworks do projeto com base na documentação exata de cada pacote.
 - **Painel Interativo Local**: Servidor local embutido para navegação visual em 3D dos componentes, camadas e rotas da aplicação.
 
 ---

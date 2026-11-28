@@ -6,12 +6,14 @@ description: Infraestrutura Auto-Hospedada Local, Backend Anti-SaaS (PocketBase,
 # 🧱 `/a-infra` — Infraestrutura Auto-Hospedada, Backend Anti-SaaS & Deploy 24/7
 
 O **`/a-infra`** é a central de arquitetura de servidores locais, microsserviços ultrarrápidos e deploy econômico com custos mínimos ou zero do Ecossistema Montanha.
-Funde oficialmente **14 skills satélites**: `pocketbase`, `hono`, `matriz-anti-saas`, `minimind`, `oracle-cloud-vps`, `docker-app-runner`, `load-testing-k6`, `pake-desktop`, `litpage`, `ghost-cms`, `open-webui`, `free-llm-hub`, `omniroute-gateway`, `opentune-music`, `canary-deploy`, `vibe-production-checklist`.
+Funde oficialmente **16 skills satélites**: `pocketbase`, `hono`, `matriz-anti-saas`, `minimind`, `oracle-cloud-vps`, `docker-app-runner`, `load-testing-k6`, `pake-desktop`, `litpage`, `ghost-cms`, `open-webui`, `free-llm-hub`, `omniroute-gateway`, `opentune-music`, `canary-deploy`, `vibe-production-checklist`, `context7`, `headroom`.
 
 ---
 
 ## ⚡ Motor `@eco` & Filosofia Anti-SaaS
 - **Preferência por Binários Únicos**: Prioridade para soluções auto-hospedadas locais (`PocketBase`, `Hono`, `SQLite`, `Caddy`) que eliminam custos mensais recorrentes de terceiros (Supabase, Firebase, Auth0).
+- **Zero Alucinação em Stacks Modernas (`context7`)**: Consulta automática de documentação versionada exata para PocketBase, Hono, Docker e Playwright.
+- **Compressão de Tool Outputs e Logs (`headroom`)**: Compressão SmartCrusher de respostas JSON volumosas e logs de containers (60–95% de economia de tokens).
 - **Validação Empírica de Performance (`load-testing-k6`)**: Toda nova rota ou API é submetida a micro-benchmarks de carga antes de ser promovida para produção.
 
 ---

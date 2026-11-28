@@ -6,13 +6,15 @@ description: Portao Mestre de Auditoria de Seguranca, Blindagem de Credenciais R
 # 🛡️ `/a-seguranca` (ou `/gatekeeper`, `@gatekeeper`) — Portão Mestre de Segurança & Auditoria
 
 O **`/a-seguranca`** é a muralha de segurança obrigatória pré-commit e pré-deploy de todo o ecossistema, garantindo proteção contra vulnerabilidades, injeções e vazamentos de segredos.
-Funde oficialmente **9 skills satélites**: `gatekeeper`, `Claude-BugHunter`, `security-audit`, `coderabbit`, `open-kritt`, `skillspector`, `ghostaction-defense`, `seguranca-api-keys`, `turnitout`, `osint-footprint`.
+Funde oficialmente **11 skills satélites**: `gatekeeper`, `Claude-BugHunter`, `security-audit`, `coderabbit`, `open-kritt`, `skillspector`, `ghostaction-defense`, `seguranca-api-keys`, `turnitout`, `osint-footprint`, `deepeval`, `sugestao-ativa`.
 
 ---
 
 ## ⚡ Motor `@eco` & Portão de Bloqueio RLAUR
 - **Regra RLAUR Inegociável**: Bloqueio sumário e imediato se qualquer chave de API, segredo, senha ou dado confidencial de aluno for detectado em texto puro.
 - **Portão Git Obrigatório**: Proibido executar `git add .`, `git commit` ou `git push` sem aprovação do gatekeeper.
+- **Protocolo de Sugestão Ativa Mandatório (`sugestao-ativa`)**: Toda auditoria e resposta de código reporta explicitamente riscos ocultos detectados (`⚠️`), otimizações cirúrgicas de 1 linha (`💡`) e próximos passos lógicos (`🔗`).
+- **Avaliação Formal de Integridade (`deepeval`)**: Verificação formal contra alucinações, vazamentos e conformidade com critérios de segurança estritos.
 
 ---
 
